@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.Observable;
 
 public class Member extends Person {
