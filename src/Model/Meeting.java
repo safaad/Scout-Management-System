@@ -1,5 +1,6 @@
 package Model;
 
+/*
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Observable;
@@ -35,3 +36,4 @@ public class Meeting extends Observable {
 
 
 }
+*/
