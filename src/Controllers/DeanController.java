@@ -18,7 +18,7 @@ public class DeanController {
 
     @FXML
     public void Remove(ActionEvent event) throws Exception {
-        AnchorPane pane2 = FXMLLoader.load(getClass().getResource("../GUI/frameRemove.fxml"));
+        AnchorPane pane2 = FXMLLoader.load(getClass().getResource("../GUI/DeanRemoving/frameRemove.fxml"));
         pane.getChildren().setAll(pane2);
     }
 }
