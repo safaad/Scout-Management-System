@@ -24,7 +24,7 @@
             <Image url="@../../Pic/scoutcamp.png" />
          </image>
       </ImageView>
-      <Label layoutX="28.0" layoutY="53.0" text="Let's see what " textFill="#3f157e">
+      <Label layoutX="56.0" layoutY="53.0" text="Let's see what " textFill="#3f157e">
          <font>
             <Font size="24.0" />
          </font>
@@ -49,5 +49,10 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="20.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Pic/logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
