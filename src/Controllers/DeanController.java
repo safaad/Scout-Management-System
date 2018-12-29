@@ -21,4 +21,10 @@ public class DeanController {
         AnchorPane pane2 = FXMLLoader.load(getClass().getResource("../GUI/DeanRemoving/frameRemove.fxml"));
         pane.getChildren().setAll(pane2);
     }
+
+    @FXML
+    public void View(ActionEvent event) throws Exception {
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/DeanView/DeanView.fxml"));
+        pane.getChildren().setAll(pane1);
+    }
 }
