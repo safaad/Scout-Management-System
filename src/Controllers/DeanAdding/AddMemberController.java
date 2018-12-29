@@ -1,4 +1,4 @@
-package Controllers;
+package Controllers.DeanAdding;
 
 public class AddMemberController {
 }
