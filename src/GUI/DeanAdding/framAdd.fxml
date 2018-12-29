@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="486.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.framController">
+<AnchorPane prefHeight="400.0" prefWidth="486.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.framController">
    <children>
       <ImageView fitHeight="367.0" fitWidth="476.0" layoutX="5.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Pic/fram.jpg" />
+            <Image url="@../../Pic/fram.jpg" />
          </image>
       </ImageView>
       <Button layoutX="119.0" layoutY="14.0" mnemonicParsing="false" onAction="#AddLeader" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e;" text="Leader" textFill="WHITE" />
@@ -36,7 +36,7 @@
             </Label>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Pic/222.png" />
+                  <Image url="@../../Pic/add-user-male1.png" />
                </image>
             </ImageView>
          </children></AnchorPane>

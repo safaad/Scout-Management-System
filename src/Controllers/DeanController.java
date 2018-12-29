@@ -12,7 +12,7 @@ public class DeanController {
 
     @FXML
     public void Add(ActionEvent event) throws Exception {
-        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/framAdd.fxml"));
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/DeanAdding/framAdd.fxml"));
         pane.getChildren().setAll(pane1);
     }
 
