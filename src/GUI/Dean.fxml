@@ -20,12 +20,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="238.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e;" text="View Evalution" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="238.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e;" text="Update" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="305.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e;" text="View Stock" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="305.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e;" text="View" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -69,7 +69,7 @@
                </image>
             </ImageView>
          </children></AnchorPane>
-      <Button layoutX="14.0" layoutY="169.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e;" text="Remove" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="169.0" mnemonicParsing="false" onAction="#Remove" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e;" text="Remove" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
