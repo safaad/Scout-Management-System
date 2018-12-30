@@ -31,6 +31,7 @@ public class LoginController {
         }
         try{
             i=Integer.parseInt(username.getText());
+            DataBaseConnection.ID=username.getText();
         }catch (Exception e){
             error.setVisible(true);
             return;
@@ -48,10 +49,25 @@ public class LoginController {
         if(i<2000){
             DataBaseConnection.username="Leader";
             DataBaseConnection.password="Leader";
-            Parent root = FXMLLoader.load(getClass().getResource("../GUI/Leader.fxml"));
-            Stage S = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            S.setScene(new Scene(root));
-            S.show();
+            if(resultSet.getString("type").equals("Leader")){
+                Parent root = FXMLLoader.load(getClass().getResource("../GUI/Leader.fxml"));
+                Stage S = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                S.setScene(new Scene(root));
+                S.show();
+            }
+            if(resultSet.getString("type").equals("Dean")){
+                Parent root = FXMLLoader.load(getClass().getResource("../GUI/Dean.fxml"));
+                Stage S = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                S.setScene(new Scene(root));
+                S.show();
+            }
+            if(resultSet.getString("type").equals("Secretary")){
+                Parent root = FXMLLoader.load(getClass().getResource("../GUI/Secretary.fxml"));
+                Stage S = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                S.setScene(new Scene(root));
+                S.show();
+            }
+
         }
         else{
             DataBaseConnection.username="Member";
@@ -62,5 +78,4 @@ public class LoginController {
             S.show();
         }
     }
-
 }
