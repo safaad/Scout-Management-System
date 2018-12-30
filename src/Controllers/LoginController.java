@@ -41,6 +41,10 @@ public class LoginController {
             error.setVisible(true);
             return;
         }
+        if(!resultSet.getString("pass").equals(password.getText())){
+            error.setVisible(true);
+            return;
+        }
         if(i<2000){
             DataBaseConnection.username="Leader";
             DataBaseConnection.password="Leader";
