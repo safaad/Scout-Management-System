@@ -33,4 +33,5 @@ public class DeanController {
         AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/DeanUpdate/DeanUpdate.fxml"));
         pane.getChildren().setAll(pane1);
     }
+
 }
