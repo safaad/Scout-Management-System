@@ -55,6 +55,7 @@ public class AddMemberController {
                 " "+id.getText() +" ','"+ rank.getText() +"')";
         PreparedStatement preparedStmt = con.prepareStatement(query);
         preparedStmt.execute();
-
+        error.setVisible(false);
+        added.setVisible(true);
     }
 }
