@@ -24,10 +24,10 @@ CREATE TABLE IF NOT EXISTS `SMSdb`.`Person` (
   `pname` VARCHAR(45) NOT NULL,
   `birthdate` DATE NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `pass` VARCHAR(45) NOT NULL,
+  `pass` VARCHAR(45) NOT NULL DEFAULT '1234',
   `phone` VARCHAR(45) NOT NULL,
   `deanid` INT NOT NULL,
-  PRIMARY KEY (`pid`),
+  PRIMARY KEY (`pid`, `deanid`),
   CONSTRAINT `fk_Person_Person1`
     FOREIGN KEY (`deanid`)
     REFERENCES `SMSdb`.`Person` (`pid`)
@@ -37,7 +37,7 @@ ENGINE = InnoDB;
 
 CREATE INDEX `fk_Person_Person1_idx` ON `SMSdb`.`Person` (`deanid` ASC) ;
 
-
+alter table Members AUTO_INCREMENT=1000;
 -- -----------------------------------------------------
 -- Table `SMSdb`.`Members`
 -- -----------------------------------------------------
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `SMSdb`.`Members` (
   `pass` VARCHAR(45) NOT NULL DEFAULT '1234',
   `phone` VARCHAR(45) NOT NULL,
   `lid` INT NOT NULL,
-  PRIMARY KEY (`mid`),
+  PRIMARY KEY (`mid`, `lid`),
   CONSTRAINT `fk_Members_Person1`
     FOREIGN KEY (`lid`)
     REFERENCES `SMSdb`.`Person` (`pid`)
@@ -102,9 +102,9 @@ CREATE TABLE IF NOT EXISTS `SMSdb`.`AttendMeetings` (
     REFERENCES `SMSdb`.`Meeting` (`meid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-	CONSTRAINT `fk_Person_has_Meeting_Secretary`
+     CONSTRAINT `fk_Person_has_Meeting_Secretary`
     FOREIGN KEY (`sid`)
-    REFERENCES `Person` (`pid`)
+    REFERENCES `SMSdb`.`Meeting` (`pid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
