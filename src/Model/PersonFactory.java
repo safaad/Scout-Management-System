@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class PersonFactory {
     private static HashMap<String,Person> hm=new HashMap<String,Person>();
-    public static Person getPerson(Dean dean,String type,String email, String fullname, String birthdate, String nationality, String gender, String username, String password, String phone){
+    public static Person getPerson(Dean dean,String type,String email, String fullname, String birthdate,String password, String phone){
         Person person = null;
         if(hm.containsKey(type)){
             return hm.get(type);
@@ -17,7 +17,7 @@ public class PersonFactory {
             }
             else{
                     if(type.equalsIgnoreCase("Secretary"))
-                        person =dean.createSecretaryAccount(email,fullname,birthdate,password,phone);
+                        person =dean.createSecretaryAccount(email,fullname,birthdate,password,phone,dean.getId());
                 }
             }
             hm.put(type,person);
@@ -29,7 +29,7 @@ public class PersonFactory {
         if(hm.containsKey("member")) {
             return (Member) hm.get("member");
         }
-        m=l.createMemberAccount(email,fullname,birthdate,password,phone,rank,evaluation);
+        m=l.createMemberAccount(email,fullname,birthdate,password,phone,rank,evaluation,l);
         hm.put("member",m);
         return m;
     }

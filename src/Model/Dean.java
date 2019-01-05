@@ -5,7 +5,40 @@ public class Dean extends Leaders{
     private ArrayList<Leaders> leaderList;
     private ArrayList<Secretary> secretaryList;
     private static Dean dean=null;
-    private static String id ;
+
+    public ArrayList<Leaders> getLeaderList() {
+        return leaderList;
+    }
+
+    public void setLeaderList(ArrayList<Leaders> leaderList) {
+        this.leaderList = leaderList;
+    }
+
+    public ArrayList<Secretary> getSecretaryList() {
+        return secretaryList;
+    }
+
+    public void setSecretaryList(ArrayList<Secretary> secretaryList) {
+        this.secretaryList = secretaryList;
+    }
+
+    public static Dean getDean() {
+        return dean;
+    }
+
+    public static void setDean(Dean dean) {
+        Dean.dean = dean;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    private  String id ;
 
     private Dean(String email, String fullname, String birthdate, String password, String phone) {
         super(email, fullname, birthdate, password, phone);
@@ -60,7 +93,7 @@ public class Dean extends Leaders{
         return false;
     }
     public Secretary createSecretaryAccount(String email, String fullname, String birthdate, String nationality, String gender, String username, String password, String phone){
-        return new Secretary(email,fullname,birthdate,nationality,gender,username,password,phone);
+        return new Secretary(email,fullname,birthdate,nationality,gender,username,password,phone, );
     }
 
     @Override
