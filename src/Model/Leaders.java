@@ -12,8 +12,8 @@ public class Leaders extends Person {
         super();
         this.memberList=new ArrayList<Member>();
     }
-    public Leaders(String email, String fullname, String birthdate, String nationality, String gender, String username, String password, String phone) {
-        super(email, fullname, birthdate, nationality, gender, username, password, phone);
+    public Leaders(String email, String fullname, String birthdate, String password, String phone) {
+        super(email, fullname, birthdate, password, phone);
         this.memberList=new ArrayList<Member>();
     }
 
@@ -33,8 +33,8 @@ public class Leaders extends Person {
         }
         return false;
     }
-    public Member createMemberAccount(String email, String fullname, String birthdate, String nationality, String gender, String username, String password, String phone, String rank, String evaluation){
-        return new Member(email,fullname,birthdate,nationality,gender,username,password,phone,rank,evaluation);
+    public Member createMemberAccount(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation,Leaders leaders ){
+        return new Member(email,fullname,birthdate,password,phone,rank,evaluation,this);
     }
 
     @Override

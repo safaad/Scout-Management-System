@@ -13,11 +13,11 @@ public class PersonFactory {
         }
         else{
             if(type.equalsIgnoreCase("Leader")){
-                person=dean.createLeadersAccount(email,fullname,birthdate,nationality,gender,username,password,phone);
+                person=dean.createLeadersAccount(email,fullname,birthdate,password,phone);
             }
             else{
                     if(type.equalsIgnoreCase("Secretary"))
-                        person =dean.createSecretaryAccount(email,fullname,birthdate,nationality,gender,username,password,phone);
+                        person =dean.createSecretaryAccount(email,fullname,birthdate,password,phone);
                 }
             }
             hm.put(type,person);
@@ -29,7 +29,7 @@ public class PersonFactory {
         if(hm.containsKey("member")) {
             return (Member) hm.get("member");
         }
-        m=l.createMemberAccount(email,fullname,birthdate,nationality,gender,username,password,phone,rank,evaluation);
+        m=l.createMemberAccount(email,fullname,birthdate,password,phone,rank,evaluation);
         hm.put("member",m);
         return m;
     }

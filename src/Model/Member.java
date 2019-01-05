@@ -5,16 +5,34 @@ import java.util.Observable;
 public class Member extends Person {
     private String rank;
     private String evaluation;
+    private String mid;
+    private Leaders Leader;
 
     public Member(){
         super();
         this.rank=null;
         this.evaluation=null;
+        this.Leader=null;
+        this.mid=null;
     }
-    public Member(String email, String fullname, String birthdate, String nationality, String gender, String username, String password, String phone, String rank, String evaluation) {
-        super(email, fullname, birthdate, nationality, gender, username, password, phone);
+    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation ) {
+        super(email, fullname, birthdate, password, phone);
         this.rank = rank;
         this.evaluation = evaluation;
+    }
+    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , Leaders leader) {
+        super(email, fullname, birthdate, password, phone);
+        this.rank = rank;
+        this.evaluation = evaluation;
+        this.Leader=leader;
+    }
+
+    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , String mid, Leaders leader) {
+        super(email, fullname, birthdate, password, phone);
+        this.rank = rank;
+        this.evaluation = evaluation;
+        this.Leader=leader;
+        this.mid=mid;
     }
 
     public String getRank() {
@@ -31,6 +49,22 @@ public class Member extends Person {
 
     public void setEvaluation(String evaluation) {
         this.evaluation = evaluation;
+    }
+
+    public String getMid() {
+        return mid;
+    }
+
+    public void setMid(String mid) {
+        this.mid = mid;
+    }
+
+    public Leaders getLeader() {
+        return Leader;
+    }
+
+    public void setLeader(Leaders leader) {
+        Leader = leader;
     }
 
     @Override

@@ -16,7 +16,7 @@ public class DataBaseConnection {
             System.out.println("Connected");
             return connection;
         }catch (Exception e){
-            System.out.println("N");
+            System.out.println("No connection");
             return null;
         }
     }
