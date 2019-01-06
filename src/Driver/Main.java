@@ -53,7 +53,6 @@ public class Main extends Application {
             DataBaseConnection.ID=pid;
         }
 
-
         qury ="select * from Person where deanid <> pid";
         preparedStmt = con.prepareStatement(qury);
         resultSet = preparedStmt.executeQuery();
@@ -87,7 +86,7 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String evaluation = resultSet.getString("evaluation");
             String lid = resultSet.getString("lid");
-            Members.add((Member) PersonFactory.getMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank, evaluation,mid));
+            Members.add(PersonFactory.getMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank, evaluation,mid));
         }
 
     }
