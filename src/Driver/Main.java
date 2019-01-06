@@ -64,7 +64,7 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String deanid = resultSet.getString("deanid");
             String type = resultSet.getString("type");
-            if(type.equals(Leader))
+            if(type.equals("Leader"))
                 Leaders.add((Leaders) PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
             else
                 Secretary.add((Secretary) PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
@@ -72,7 +72,9 @@ public class Main extends Application {
         Dean.getDean().setLeaderList(Leaders);
         Dean.getDean().setSecretaryList(Secretary);
 
-
+        qury ="select * from Members";
+        preparedStmt = con.prepareStatement(qury);
+        resultSet = preparedStmt.executeQuery();
         while(resultSet.next()){
             String email = resultSet.getString("email");
             String name = resultSet.getString("mname");
