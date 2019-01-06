@@ -50,7 +50,9 @@ public class Main extends Application {
             String pid = resultSet.getString("pid");
             String pass = resultSet.getString("pass");
             Dean.getDean(email,name,birthdate,pass,phone,pid);
+            DataBaseConnection.ID=pid;
         }
+
 
         qury ="select * from Person where deanid <> pid";
         preparedStmt = con.prepareStatement(qury);
