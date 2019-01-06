@@ -6,15 +6,18 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 public class Leaders extends Person {
+
+    private String id ;
     private ArrayList<Member> memberList;
 
     public Leaders(){
         super();
         this.memberList=new ArrayList<Member>();
     }
-    public Leaders(String email, String fullname, String birthdate, String password, String phone) {
+    public Leaders(String email, String fullname, String birthdate, String password, String phone ,String id ) {
         super(email, fullname, birthdate, password, phone);
         this.memberList=new ArrayList<Member>();
+        this.id=id;
     }
 
     public ArrayList<Member> getMemberList() {
@@ -40,5 +43,13 @@ public class Leaders extends Person {
     @Override
     public void accept(PersonVisitor pv) {
 
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

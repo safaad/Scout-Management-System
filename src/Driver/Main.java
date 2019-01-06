@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Main extends Application {
 
     public static ArrayList<Member> Members = new ArrayList<>();
-    public static ArrayList<Leaders> Leaders = new ArrayList<>();
+    public static ArrayList<Person> Leaders = new ArrayList<>();
     public static ArrayList<Item> Item = new ArrayList<>();
 
 
@@ -28,10 +28,15 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        try {
+            Fill(Members, Leaders, Item);
+        }catch (Exception e){
+            System.out.println("Error while reading from the database");
+        }
         launch(args);
     }
 
-    public static void Fill (ArrayList<Member> Member, ArrayList<Leaders> Leader ,ArrayList<Item> Item) throws Exception{
+    public static void Fill (ArrayList<Member> Member, ArrayList<Person> Leader ,ArrayList<Item> Item) throws Exception{
         Connection con = DataBaseConnection.getConnection();
         String qury ="select * from Person where deanid = pid";
         PreparedStatement preparedStmt = con.prepareStatement(qury);
@@ -56,13 +61,11 @@ public class Main extends Application {
             String birthdate = resultSet.getString("birthdate");
             String pid = resultSet.getString("pid");
             String pass = resultSet.getString("pass");
+            String deanid = resultSet.getString("deanid");
+            String type = resultSet.getString("type");
+            Leaders.add(PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
         }
-
-
-
-
-
-
+        Dean.getDean().setLeaderList(Leaders);
 
 
         while(resultSet.next()){
