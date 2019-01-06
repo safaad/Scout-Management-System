@@ -17,14 +17,14 @@ public class PersonFactory {
             }
             else{
                     if(type.equalsIgnoreCase("Secretary"))
-                        person =dean.createSecretaryAccount(email,fullname,birthdate,password,phone,dean.getId());
+                        person =dean.createSecretaryAccount(email,fullname,birthdate,password,phone);
                 }
             }
             hm.put(type,person);
 
         return person;
     }
-    public static Member getMember(Leaders l,String email, String fullname, String birthdate, String nationality, String gender, String username, String password, String phone, String rank, String evaluation){
+    public static Member getMember(Leaders l,String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation){
         Member m= null;
         if(hm.containsKey("member")) {
             return (Member) hm.get("member");

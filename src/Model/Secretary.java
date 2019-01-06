@@ -7,11 +7,11 @@ import java.util.Observable;
 public class Secretary extends Person{
 
     private String id,deanid;
-//    public Meeting createMeeting(String objective,String Date,ArrayList<Person> invities){
-//        Meeting m= new Meeting(objective,Date,this);
-//
-//        return m;
-//    }
+    public Meeting createMeeting(String objective,String Date,ArrayList<Person> invities){
+        Meeting m= new Meeting(objective,Date,this);
+
+        return m;
+    }
 
     public Secretary(){
         super();

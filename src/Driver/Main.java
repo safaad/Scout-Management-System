@@ -14,9 +14,9 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
-    public static ArrayList<Member> Members = new ArrayList<>();
-    public static ArrayList<Leaders> Leaders = new ArrayList<>();
-    public static ArrayList<Item> Item = new ArrayList<>();
+//    public static ArrayList<Member> Members = new ArrayList<>();
+//    public static ArrayList<Leaders> Leaders = new ArrayList<>();
+//    public static ArrayList<Item> Item = new ArrayList<>();
 
 
     @Override

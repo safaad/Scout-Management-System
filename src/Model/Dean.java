@@ -92,8 +92,8 @@ public class Dean extends Leaders{
         }
         return false;
     }
-    public Secretary createSecretaryAccount(String email, String fullname, String birthdate, String nationality, String gender, String username, String password, String phone){
-        return new Secretary(email,fullname,birthdate,nationality,gender,username,password,phone, );
+    public Secretary createSecretaryAccount(String email, String fullname, String birthdate, String password, String phone){
+        return new Secretary(email,fullname,birthdate,password,phone,this.id);
     }
 
     @Override
