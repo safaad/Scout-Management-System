@@ -16,6 +16,7 @@ public class Main extends Application {
 
     public static ArrayList<Member> Members = new ArrayList<>();
     public static ArrayList<Leaders> Leaders = new ArrayList<>();
+    public static ArrayList<Secretary> Secretary = new ArrayList<>();
     public static ArrayList<Item> Item = new ArrayList<>();
 
 
@@ -63,9 +64,13 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String deanid = resultSet.getString("deanid");
             String type = resultSet.getString("type");
-            Leaders.add(PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
+            if(type.equals(Leader))
+                Leaders.add((Leaders) PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
+            else
+                Secretary.add((Secretary) PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
         }
         Dean.getDean().setLeaderList(Leaders);
+        Dean.getDean().setSecretaryList(Secretary);
 
 
         while(resultSet.next()){
@@ -78,15 +83,18 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String evaluation = resultSet.getString("evaluation");
             String lid = resultSet.getString("lid");
-            Members.add(PersonFactory.getMember(Leaders , email, name,  birthdate,  pass,  phone,  rank, evaluation,mid));
+            Members.add((Member) PersonFactory.getMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank, evaluation,mid));
         }
 
     }
 
 
-    public Leaders findLeader(String mid ){
+    public static Leaders findLeader(String mid ){
         for(int i=0;i<Leaders.size();i++){
-            Leaders.get(i).getID()
+            if(Leaders.get(i).getId().equals(mid)){
+                return Leaders.get(i);
+            }
         }
+        return null;
     }
 }

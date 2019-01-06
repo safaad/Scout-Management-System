@@ -5,22 +5,25 @@ import com.sun.xml.internal.ws.api.model.MEP;
 import java.util.HashMap;
 
 public class PersonFactory {
-    private static HashMap<String,Person> hm=new HashMap<String,Person>();
-    public static Leaders getPerson(Dean dean,String type,String email, String fullname, String birthdate, String pass ,String phone ,String id){
+    public static HashMap<String,Person> hm=new HashMap<String,Person>();
+    public static Person getPerson(Dean dean,String type,String email, String fullname, String birthdate, String pass ,String phone ,String id){
         Person person = null;
         if(hm.containsKey(type)){
             return hm.get(type);
         }
         else{
             if(type.equalsIgnoreCase("Leader")){
-                return hm.put(dean.createLeadersAccount(email,fullname,birthdate,pass,phone,id));
+                 hm.put("Leader",dean.createLeadersAccount(email,fullname,birthdate,pass,phone,id));
+                 return hm.get(type);
             }
             else{
-                    if(type.equalsIgnoreCase("Secretary"))
-                        return dean.createSecretaryAccount(email,fullname,birthdate,phone,id);
+                    if(type.equalsIgnoreCase("Secretary")) {
+                        hm.put("Secretary", dean.createSecretaryAccount(email, fullname, birthdate, phone, id));
+                        return hm.get(type);
+                    }
                 }
             }
-            hm.put(type,person);
+
 
         return person;
     }

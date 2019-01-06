@@ -2,14 +2,24 @@ package Model;
 import java.util.ArrayList;
 
 public class Dean extends Leaders{
-    private ArrayList<Person> leaderList;
+    private ArrayList<Leaders> leaderList;
+    private ArrayList<Secretary> SecretaryList;
+
+    public ArrayList<Secretary> getSecretaryList() {
+        return SecretaryList;
+    }
+
+    public void setSecretaryList(ArrayList<Secretary> secretaryList) {
+        SecretaryList = secretaryList;
+    }
+
     private static Dean dean=null;
 
-    public ArrayList<Person> getLeaderList() {
+    public ArrayList<Leaders> getLeaderList() {
         return leaderList;
     }
 
-    public void setLeaderList(ArrayList<Person> leaderList) {
+    public void setLeaderList(ArrayList<Leaders> leaderList) {
         this.leaderList = leaderList;
     }
 
@@ -41,8 +51,8 @@ public class Dean extends Leaders{
         }
         return dean;
     }
-    public void addLeaderList(ArrayList<Person> leaderList) {
-        for(Person l:leaderList){
+    public void addLeaderList(ArrayList<Leaders> leaderList) {
+        for(Leaders l:leaderList){
             this.leaderList.add(l);
         }
     }
@@ -53,6 +63,20 @@ public class Dean extends Leaders{
         }
         return false;
     }
+
+    public void addSecretaryList(ArrayList<Secretary> leaderList) {
+        for(Secretary l:leaderList){
+            this.SecretaryList.add(l);
+        }
+    }
+    public boolean removeSecretary(Secretary l){
+        if(SecretaryList.contains(l) && l!=null){
+            SecretaryList.remove(l);
+            return true;
+        }
+        return false;
+    }
+
     public Leaders createLeadersAccount(String email, String fullname, String birthdate, String password, String phone,String id){
         return new Leaders(email,fullname,birthdate,password,phone , id);
     }
