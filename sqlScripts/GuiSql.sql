@@ -37,7 +37,7 @@ ENGINE = InnoDB;
 
 CREATE INDEX `fk_Person_Person1_idx` ON `SMSdb`.`Person` (`deanid` ASC) ;
 
-alter table Members AUTO_INCREMENT=1000;
+alter table Person AUTO_INCREMENT=1000;
 -- -----------------------------------------------------
 -- Table `SMSdb`.`Members`
 -- -----------------------------------------------------
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `SMSdb`.`AttendMeetings` (
     ON UPDATE NO ACTION,
      CONSTRAINT `fk_Person_has_Meeting_Secretary`
     FOREIGN KEY (`sid`)
-    REFERENCES `SMSdb`.`Meeting` (`pid`)
+    REFERENCES `SMSdb`.`Person` (`pid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
