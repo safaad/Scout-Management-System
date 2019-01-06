@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Main extends Application {
 
     public static ArrayList<Member> Members = new ArrayList<>();
-    public static ArrayList<Person> Leaders = new ArrayList<>();
+    public static ArrayList<Leaders> Leaders = new ArrayList<>();
     public static ArrayList<Item> Item = new ArrayList<>();
 
 
@@ -36,7 +36,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static void Fill (ArrayList<Member> Member, ArrayList<Person> Leader ,ArrayList<Item> Item) throws Exception{
+    public static void Fill (ArrayList<Member> Member, ArrayList<Leaders> Leader ,ArrayList<Item> Item) throws Exception{
         Connection con = DataBaseConnection.getConnection();
         String qury ="select * from Person where deanid = pid";
         PreparedStatement preparedStmt = con.prepareStatement(qury);
@@ -77,8 +77,16 @@ public class Main extends Application {
             String mid = resultSet.getString("mid");
             String pass = resultSet.getString("pass");
             String evaluation = resultSet.getString("evaluation");
-
+            String lid = resultSet.getString("lid");
+            Members.add(PersonFactory.getMember(Leaders , email, name,  birthdate,  pass,  phone,  rank, evaluation,mid));
         }
 
+    }
+
+
+    public Leaders findLeader(String mid ){
+        for(int i=0;i<Leaders.size();i++){
+            Leaders.get(i).getID()
+        }
     }
 }
