@@ -21,7 +21,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Leader.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Dean.fxml"));
         primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
@@ -45,7 +45,6 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             Dean.getDean(email,name,birthdate,pass,phone,pid);
         }
-
 
         qury ="select * from Person where deanid <> pid";
         preparedStmt = con.prepareStatement(qury);

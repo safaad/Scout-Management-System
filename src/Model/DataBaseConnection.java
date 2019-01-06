@@ -7,7 +7,7 @@ public class DataBaseConnection {
 
     public static String username = "Dean" ;
     public static String password = "Dean" ;
-    public static String ID="0";
+    public static String ID="1000";
 
     public static Connection getConnection () {
         try {

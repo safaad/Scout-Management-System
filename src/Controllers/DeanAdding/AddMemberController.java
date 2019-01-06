@@ -51,8 +51,8 @@ public class AddMemberController {
             added.setVisible(false);
             return;
         }
-        String query = " insert into Member (mname, birthdate, phone, email,lid ,rank) values ('"+name.getText()+"','"+date.getText()+"','"+phone.getText()+"','"+email.getText()+"','" +
-                " "+id.getText() +" ','"+ rank.getText() +"')";
+        String query = " insert into members (mname, birthdate, email ,phone , lid,Members.rank , evaluation ) values ('"+name.getText()+"','"+date.getText()+"','"+phone.getText()+"','"+email.getText()+"','" +
+                " "+id.getText() +"','"+ rank.getText() +"','0')";
         PreparedStatement preparedStmt = con.prepareStatement(query);
         preparedStmt.execute();
         error.setVisible(false);
