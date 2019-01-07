@@ -6,58 +6,89 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanUpdating.UpdateMemberController">
    <children>
-      <Label layoutX="34.0" layoutY="44.0" prefHeight="23.0" prefWidth="97.0" text="Name :">
+      <Label layoutX="34.0" layoutY="27.0" prefHeight="23.0" prefWidth="97.0" text="Name :">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="143.0" prefHeight="23.0" prefWidth="97.0" text="Birth Date :">
+      <Label layoutX="34.0" layoutY="91.0" prefHeight="23.0" prefWidth="97.0" text="Birth Date :">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="76.0" text="Username :">
+      <Label layoutX="34.0" layoutY="59.0" prefHeight="23.0" prefWidth="97.0" text="Phone :">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="109.0" prefHeight="23.0" prefWidth="97.0" text="Phone :">
+      <Label layoutX="34.0" layoutY="123.0" prefHeight="23.0" prefWidth="97.0" text="Email :">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="176.0" prefHeight="23.0" prefWidth="97.0" text="Email :">
+      <TextField fx:id="name" layoutX="152.0" layoutY="24.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phone" layoutX="152.0" layoutY="56.0" promptText="81677028">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="date" layoutX="152.0" layoutY="88.0" promptText="1111-11-11">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="email" layoutX="152.0" layoutY="120.0" promptText="example.email@mail.com">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="274.0" layoutY="243.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE" />
+      <Label layoutX="36.0" layoutY="155.0" text="Leader ID :">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="152.0" layoutY="41.0">
+      <TextField fx:id="id" layoutX="152.0" layoutY="152.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="152.0" layoutY="73.0">
+      <Label fx:id="error" layoutX="40.0" layoutY="213.0" text="Please check the above info" textFill="#ff0404" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="added" layoutX="37.0" layoutY="209.0" text="Member is Successfully add" textFill="#2f00ff" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="187.0" text="Rank :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rank" layoutX="152.0" layoutY="184.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="152.0" layoutY="106.0" promptText="81677028">
+      <Button layoutX="34.0" layoutY="243.0" mnemonicParsing="false" onAction="#fill" prefHeight="27.0" prefWidth="62.0" style="-fx-background-color: #3f157e;" text="Fill" textFill="WHITE" />
+      <Label fx:id="error" layoutX="78.0" layoutY="216.0" text="Please Check the above info" textFill="RED" visible="false">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font>
-      </TextField>
-      <TextField layoutX="152.0" layoutY="140.0" promptText="1111-11-11">
+      </Label>
+      <Label fx:id="done" layoutX="77.0" layoutY="216.0" text="Member Successfuly Update" textFill="#0900ff" visible="false">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font>
-      </TextField>
-      <TextField layoutX="152.0" layoutY="176.0" promptText="example.email@mail.com">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <Button layoutX="274.0" layoutY="243.0" mnemonicParsing="false" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e;" text="Submit" textFill="WHITE" />
+      </Label>
    </children>
 </AnchorPane>
