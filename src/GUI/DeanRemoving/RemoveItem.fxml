@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanRemoving.RemoveItemController">
    <children>
-      <TextField layoutX="140.0" layoutY="85.0">
+      <TextField fx:id="id" layoutX="140.0" layoutY="85.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -18,10 +18,20 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="288.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
+      <Button layoutX="288.0" layoutY="190.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <Label fx:id="done" layoutX="23.0" layoutY="40.0" text="The Item successfully removed" textFill="#2600ff" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" layoutX="133.0" layoutY="142.0" text="Incorrect ID" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
