@@ -8,6 +8,15 @@ public class DataBaseConnection {
     public static String username = "Dean" ;
     public static String password = "Dean" ;
     public static String ID="1000";
+    private static String ID2=null;
+
+    public static String getID2() {
+        return ID2;
+    }
+
+    public static void setID2(String ID2) {
+        DataBaseConnection.ID2 = ID2;
+    }
 
     public static Connection getConnection () {
         try {

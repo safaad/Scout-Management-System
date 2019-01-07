@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanUpdating.UpdateIteamController">
    <children>
-      <TextField layoutX="172.0" layoutY="62.0">
+      <TextField fx:id="name" layoutX="172.0" layoutY="62.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="172.0" layoutY="114.0">
+      <TextField fx:id="nb" layoutX="172.0" layoutY="114.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -23,15 +23,30 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="117.0" text="Quantity :" textFill="#3f157e">
+      <Label layoutX="65.0" layoutY="117.0" text="Quantity :" textFill="#3f157e">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="280.0" layoutY="189.0" mnemonicParsing="false" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
+      <Button layoutX="280.0" layoutY="189.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
+      <Button layoutX="45.0" layoutY="189.0" mnemonicParsing="false" onAction="#fill" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #3f157e;" text="Fill" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="error" layoutX="47.0" layoutY="150.0" text="Missing Info Please Check " textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="done" layoutX="50.0" layoutY="24.0" text="Item Successfuly Updated" textFill="#3c00ff" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
