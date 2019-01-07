@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanRemoving.RemoveLeaderController">
+<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanRemoving.RemoveLeaderController">
    <children>
       <TextField fx:id="id" layoutX="152.0" layoutY="56.0">
          <font>
@@ -20,7 +20,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="300.0" layoutY="206.0" mnemonicParsing="false" onAction="#Submit" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
+      <Button layoutX="300.0" layoutY="206.0" mnemonicParsing="false" onAction="#Done" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

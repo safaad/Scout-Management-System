@@ -3,13 +3,11 @@ package Controllers.DeanRemoving;
 import Driver.Main;
 import Model.DataBaseConnection;
 import Model.Dean;
-import Model.Leaders;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-
-import java.awt.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,7 +26,7 @@ public class RemoveLeaderController {
 
 
     @FXML
-    public void Submit(ActionEvent e) throws Exception {
+    public void Done(ActionEvent e) throws Exception {
         if(id.getText().isEmpty()){
             done.setVisible(false);
             error.setVisible(true);
@@ -44,9 +42,6 @@ public class RemoveLeaderController {
             return;
         }
 
-        qury ="DELETE FROM Person where pid = " + id.getText();
-        preparedStmt = con.prepareStatement(qury);
-        preparedStmt.execute();
 
         for(int i=0;i<Main.Leaders.size();i++){
             if(Main.Leaders.get(i).getId().equals(id.getText())){
@@ -64,12 +59,16 @@ public class RemoveLeaderController {
                     Main.Members.remove(i);
                 }
             }
+            qury ="DELETE FROM Person where pid =" + id.getText();
+            preparedStmt = con.prepareStatement(qury);
+            preparedStmt.execute();
+
             done.setVisible(true);
             error.setVisible(false);
             return;
         }
         else {
-            qury ="UPDATE FROM Members Set lid = " + Dean.getDean().getId() +" where lid = " + id.getText() ;
+            qury ="UPDATE Members Set lid = " + Dean.getDean().getId() +" where lid = " + id.getText() ;
             preparedStmt = con.prepareStatement(qury);
             preparedStmt.execute();
             for(int i=0;i< Main.Members.size() ; i++){
@@ -77,6 +76,10 @@ public class RemoveLeaderController {
                     Main.Members.get(i).setLeader(Dean.getDean());
                 }
             }
+            qury ="DELETE FROM Person where pid =" + id.getText();
+            preparedStmt = con.prepareStatement(qury);
+            preparedStmt.execute();
+
             done.setVisible(true);
             error.setVisible(false);
             return;
