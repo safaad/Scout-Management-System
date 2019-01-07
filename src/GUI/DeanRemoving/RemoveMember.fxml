@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanRemoving.RemoveMemberController">
    <children>
-      <TextField layoutX="152.0" layoutY="85.0">
+      <TextField fx:id="id" layoutX="152.0" layoutY="85.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -18,10 +18,20 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="300.0" layoutY="206.0" mnemonicParsing="false" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
+      <Button layoutX="300.0" layoutY="206.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <Label fx:id="done" layoutX="7.0" layoutY="43.0" text="The Member successfuly Removed" textFill="#3700ff" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" layoutX="121.0" layoutY="142.0" text="No Member ID" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
