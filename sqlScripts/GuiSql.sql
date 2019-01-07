@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `SMSdb`.`Items` (
   PRIMARY KEY (`itid`))
 ENGINE = InnoDB;
 
-
+alter table Items AUTO_INCREMENT=0;
 -- -----------------------------------------------------
 -- Table `SMSdb`.`AttendMeetings`
 -- -----------------------------------------------------

@@ -89,6 +89,16 @@ public class Main extends Application {
             Members.add(PersonFactory.getMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank, evaluation,mid));
         }
 
+        qury ="select * from Items";
+        preparedStmt = con.prepareStatement(qury);
+        resultSet = preparedStmt.executeQuery();
+        while(resultSet.next()){
+            String id = resultSet.getString("itid");
+            String name = resultSet.getString("iname");
+            String quantity = resultSet.getString("quantity");
+            Item.add(new Item(id,name,quantity));
+        }
+
     }
 
 
