@@ -56,9 +56,12 @@ public class UpdateMemberController {
             return;
         }
         Connection con = DataBaseConnection.getConnection();
-        String qury ="UPDATE Members Set mname = '" + name.getText() +"' , phone = "+phone.getText() +" , birthdate = '"+date.getText()+"' ," +
-                "email = '"+email.getText()+"' , lid = "+id.getText()+" , rank = '"+ rank.getText() +"' where mid = " + DataBaseConnection.getID2() ;
+        String qury ="UPDATE Members Set mname = '" + name.getText() +"' , phone = '"+phone.getText() +"' , birthdate = '"+date.getText()+"' , email = '"+email.getText()+"' , lid = "+id.getText()+"  where mid = " + DataBaseConnection.getID2() +";" ;
         PreparedStatement preparedStmt = con.prepareStatement(qury);
+        preparedStmt.execute();
+
+        qury ="UPDATE Members Set Members.rank = '" + rank.getText() +"' where mid = "+DataBaseConnection.getID2();
+        preparedStmt=con.prepareStatement(qury);
         preparedStmt.execute();
         error.setVisible(false);
         done.setVisible(true);
