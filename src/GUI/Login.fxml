@@ -25,7 +25,7 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="password" layoutX="539.0" layoutY="200.0">
+      <TextField fx:id="password" accessibleRole="PASSWORD_FIELD" layoutX="539.0" layoutY="200.0">
          <font>
             <Font size="18.0" />
          </font>
