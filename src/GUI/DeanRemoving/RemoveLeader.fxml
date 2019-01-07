@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanRemoving.RemoveLeaderController">
    <children>
-      <TextField layoutX="152.0" layoutY="56.0">
+      <TextField fx:id="id" layoutX="152.0" layoutY="56.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -20,7 +20,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="300.0" layoutY="206.0" mnemonicParsing="false" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
+      <Button layoutX="300.0" layoutY="206.0" mnemonicParsing="false" onAction="#Submit" style="-fx-background-color: #3f157e;" text="Submit" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -30,7 +30,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <RadioButton layoutX="99.0" layoutY="142.0" mnemonicParsing="false" text="yes">
+      <RadioButton fx:id="yes" layoutX="99.0" layoutY="142.0" mnemonicParsing="false" text="yes">
          <font>
             <Font size="18.0" />
          </font>
@@ -38,10 +38,20 @@
             <ToggleGroup fx:id="hell" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="199.0" layoutY="142.0" mnemonicParsing="false" selected="true" text="No" toggleGroup="$hell">
+      <RadioButton fx:id="no" layoutX="199.0" layoutY="142.0" mnemonicParsing="false" selected="true" text="No" toggleGroup="$hell">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
+      <Label fx:id="error" layoutX="40.0" layoutY="176.0" text="Please check the above info " textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="done" layoutX="1.0" layoutY="16.0" text="The Leader is successfuly removed" textFill="#5e00ff" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
