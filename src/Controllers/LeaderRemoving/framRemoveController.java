@@ -12,13 +12,13 @@ public class framRemoveController {
 
     @FXML
     public void member(ActionEvent event) throws Exception {
-        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/LeaderRemoving/RemoveMember.fxml"));
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/DeanRemoving/RemoveMember.fxml"));
         pane2.getChildren().setAll(pane1);
     }
 
     @FXML
     public void item (ActionEvent event) throws Exception {
-        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/LeaderRemoving/RemoveItem.fxml"));
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/DeanRemoving/RemoveItem.fxml"));
         pane2.getChildren().setAll(pane1);
     }
 

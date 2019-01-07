@@ -12,13 +12,13 @@ public class framLeaderController {
 
     @FXML
     public void members (ActionEvent event) throws Exception {
-        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/LeaderAdding/AddMemberLeader.fxml"));
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/DeanAdding/AddMember.fxml"));
         pane.getChildren().setAll(pane1);
     }
 
     @FXML
     public void item (ActionEvent event) throws Exception {
-        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/LeaderAdding/AddItemLeader.fxml"));
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/DeanAdding/AddItem.fxml"));
         pane.getChildren().setAll(pane1);
     }
 
