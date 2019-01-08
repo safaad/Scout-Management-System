@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="284.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanUpdating.UpdateLeaderController">
    <children>
       <Label layoutX="34.0" layoutY="44.0" prefHeight="23.0" prefWidth="97.0" text="Name :">
          <font>
@@ -50,13 +50,13 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="submit" layoutX="274.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e;" text="Submit" textFill="WHITE" />
+      <Button layoutX="274.0" layoutY="244.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e #3f157e#3f157e;" text="Submit" textFill="WHITE" />
       <Label layoutX="34.0" layoutY="180.0" text="Type :">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <RadioButton fx:id="dean" layoutX="113.0" layoutY="183.0" mnemonicParsing="false" text="Dean">
+      <RadioButton fx:id="leader" layoutX="131.0" layoutY="183.0" mnemonicParsing="false" text="Leader">
          <font>
             <Font size="14.0" />
          </font>
@@ -64,12 +64,7 @@
             <ToggleGroup fx:id="Leaders" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="leader" layoutX="188.0" layoutY="183.0" mnemonicParsing="false" text="Leader" toggleGroup="$Leaders">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </RadioButton>
-      <RadioButton fx:id="secretary" layoutX="274.0" layoutY="183.0" mnemonicParsing="false" text="Secretary" toggleGroup="$Leaders">
+      <RadioButton fx:id="secretary" layoutX="243.0" layoutY="183.0" mnemonicParsing="false" text="Secretary" toggleGroup="$Leaders">
          <font>
             <Font size="14.0" />
          </font>
@@ -79,10 +74,15 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="success" layoutX="59.0" layoutY="213.0" text="Leader Successfully Add" textFill="#5100ff" visible="false">
+      <Label fx:id="done" layoutX="59.0" layoutY="213.0" text="Leader Successfully Add" textFill="#5100ff" visible="false">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+      <Button layoutX="37.0" layoutY="244.0" mnemonicParsing="false" onAction="#fill" prefHeight="28.0" prefWidth="62.0" style="-fx-background-color: #3f157e#3f157e;" text="fill" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
