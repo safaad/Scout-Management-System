@@ -33,4 +33,7 @@ public class Secretary extends Person{
     public void accept(PersonVisitor pv) {
 
     }
+    public String getId(){
+        return id;
+    }
 }

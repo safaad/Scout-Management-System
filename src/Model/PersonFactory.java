@@ -18,7 +18,7 @@ public class PersonFactory {
             }
             else{
                     if(type.equalsIgnoreCase("Secretary")) {
-                        hm.put("Secretary", dean.createSecretaryAccount(email, fullname, birthdate, phone, id));
+                        hm.put("Secretary", dean.createSecretaryAccount(email, fullname, birthdate,pass ,phone, id));
                         return hm.get(type);
                     }
                 }

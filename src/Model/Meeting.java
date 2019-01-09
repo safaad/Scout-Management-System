@@ -11,6 +11,34 @@ import java.util.Observable;
 //import javax.mail.Transport;
 
 public class Meeting extends Observable {
+    public String getObjective() {
+        return objective;
+    }
+
+    public void setObjective(String objective) {
+        this.objective = objective;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
+    }
+
+    public ArrayList<Person> getInvities() {
+        return invities;
+    }
+
+    public Secretary getSec() {
+        return sec;
+    }
+
+    public void setSec(Secretary sec) {
+        this.sec = sec;
+    }
+
     private String objective;
     private String Date;
     private ArrayList<Person> invities;
@@ -21,6 +49,10 @@ public class Meeting extends Observable {
         Date = date;
         sec=s;
         invities=new ArrayList<Person>();
+    }
+
+    public void setInvities(ArrayList<Person> p){
+        invities=p;
     }
     private void sendEmail(Secretary sender, ArrayList<Person> invities){
 

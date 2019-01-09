@@ -81,8 +81,8 @@ public class Dean extends Leaders{
         return new Leaders(email,fullname,birthdate,password,phone , id);
     }
 
-    public Secretary createSecretaryAccount(String email, String fullname, String birthdate, String password, String phone){
-        return new Secretary(email,fullname,birthdate,password,phone,getId());
+    public Secretary createSecretaryAccount(String email, String fullname, String birthdate, String password, String phone ,String id){
+        return new Secretary(email,fullname,birthdate,password,phone,id);
     }
 
     @Override

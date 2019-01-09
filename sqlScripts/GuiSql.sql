@@ -117,3 +117,18 @@ CREATE INDEX `fk_Person_has_Meeting_Person1_idx` ON `SMSdb`.`AttendMeetings` (`p
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+create user 'Dean'@'localhost' identified by 'Dean';
+grant all privileges on SMSdb.* to 'Dean'@'localhost';
+
+create user 'Member'@'localhost' identified by 'Member';
+grant select ,show view on SMSdb.* to 'Member'@'localhost';
+
+create user 'Leader'@'localhost' identified by 'Leader';
+grant select ,show view on SMSdb.* to 'Leader'@'localhost';
+grant all privileges on SMSdb.Members to 'Leader'@'localhost';
+grant all privileges on SMSdb.Items to 'Leader'@'localhost';
+
+
