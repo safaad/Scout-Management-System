@@ -6,22 +6,24 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Observable;
+import java.util.ResourceBundle;
 
-public class MeetingController {
+public class MeetingController implements Initializable {
     @FXML
-    ListView<String> listview=new ListView<String>();
+    ListView<String> listview;
 
     @FXML
     Label stxt;
@@ -34,9 +36,11 @@ public class MeetingController {
     @FXML
     Label etxt;
     @FXML
-    public void show (ActionEvent e ) throws Exception {
-
+    public void refresh() throws Exception {
+        date.getEditor().clear();
+        title.clear();
         ObservableList<String> items= FXCollections.observableArrayList();
+        listview.getSelectionModel().clearSelection();
         items.add("Dean ;"+Dean.getDean().getId()+";" + Dean.getDean().getFullname());
         for(Leaders l : Main.Leaders){
             items.add("Leader;" +l.getId()+";"+ l.getFullname());
@@ -46,6 +50,7 @@ public class MeetingController {
         }
         listview.setItems(items);
         listview.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
     }
 
     @FXML
@@ -53,6 +58,7 @@ public class MeetingController {
         Connection con = DataBaseConnection.getConnection();
         Meeting m;
         ArrayList<Person> invitees =new ArrayList<Person>();
+
         ObservableList<String> selected=listview.getSelectionModel().getSelectedItems();
         Secretary sec=null;
         LocalDate value=date.getValue();
@@ -117,4 +123,12 @@ public class MeetingController {
         S.close();
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            refresh();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -9,6 +9,8 @@ public class PersonFactory {
     public static Person getPerson(Dean dean,String type,String email, String fullname, String birthdate, String pass ,String phone ,String id){
         Person person = null;
         if(hm.containsKey(type)){
+            person=hm.get(type);
+            //person.setBirthdate();
             return hm.get(type);
         }
         else{

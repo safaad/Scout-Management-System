@@ -15,6 +15,8 @@ public class SecretaryController {
         Parent root = FXMLLoader.load(getClass().getResource("../../GUI/Meeting/meeting.fxml"));
         Stage s =new Stage();
         s.setScene(new Scene(root));
+        s.setResizable(false);
         s.show();
+
     }
 }
