@@ -6,18 +6,16 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 public class Leaders extends Person {
-
-    private String id ;
     private ArrayList<Member> memberList;
-
+    private String deanid;
     public Leaders(){
         super();
         this.memberList=new ArrayList<Member>();
     }
-    public Leaders(String email, String fullname, String birthdate, String password, String phone ,String id ) {
-        super(email, fullname, birthdate, password, phone);
+    public Leaders(String email, String fullname, String birthdate, String password, String phone ,String id,String deanid ) {
+        super(email, fullname, birthdate, password, phone,id);
+        this.deanid=deanid;
         this.memberList=new ArrayList<Member>();
-        this.id=id;
     }
 
     public ArrayList<Member> getMemberList() {
@@ -36,20 +34,26 @@ public class Leaders extends Person {
         }
         return false;
     }
-    public Member createMemberAccount(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation,String mid ,Leaders leaders ){
-        return new Member(email,fullname,birthdate,password,phone,rank,evaluation,mid,this);
+    public Member createMemberAccount(String email, String fullname, String birthdate, String password, String phone, String rank,String mid ){
+        Member m= new Member(email,fullname,birthdate,password,phone,rank,this,mid);
+        this.memberList.add(m);
+        return m;
+    }
+
+    public String getDeanid() {
+        return deanid;
+    }
+
+    public void setDeanid(String deanid) {
+        this.deanid = deanid;
+    }
+
+    public void setMemberList(ArrayList<Member> memberList) {
+        this.memberList = memberList;
     }
 
     @Override
     public void accept(PersonVisitor pv) {
 
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 }

@@ -11,7 +11,7 @@ public abstract class Person implements Observer {
     private String password;
     private String phone;
     private ArrayList<Meeting> attendedMeetings;
-
+    private String id;
     public Person() {
         this.email=null;
         this.fullname=null;
@@ -21,7 +21,8 @@ public abstract class Person implements Observer {
         this.attendedMeetings=new ArrayList<Meeting>();
     }
 
-    public Person(String email, String fullname, String birthdate, String password, String phone){
+    public Person(String email, String fullname, String birthdate, String password, String phone,String id){
+        this.id=id;
         this.email=email;
         this.fullname=fullname;
         this.birthdate=birthdate;
@@ -76,6 +77,14 @@ public abstract class Person implements Observer {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

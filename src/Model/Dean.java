@@ -32,17 +32,12 @@ public class Dean extends Leaders{
         Dean.dean = dean;
     }
 
-    private Dean(String email, String fullname, String birthdate, String password, String phone) {
-        super(email, fullname, birthdate, password, phone,null);
-        this.leaderList=new ArrayList<>();
-    }
-
     private Dean(String email, String fullname, String birthdate, String password, String phone,String id) {
-        super(email, fullname, birthdate, password, phone,id);
-        this.leaderList=new ArrayList<>();
-
+        super(email, fullname, birthdate, password, phone,"1000","1000");
+        this.leaderList=new ArrayList<Leaders>();
+        this.SecretaryList=new ArrayList<Secretary>();
     }
-    public static Dean getDean(String email, String fullname, String birthdate,String password, String phone ,String id) {
+    public static Dean getDean(String email, String fullname, String birthdate,String password, String phone,String id) {
         if (dean == null) {
             dean = new Dean(email, fullname, birthdate, password, phone ,id);
         } else {
@@ -76,13 +71,23 @@ public class Dean extends Leaders{
         }
         return false;
     }
+    public  void addLeaderList(Leaders person){
+        this.leaderList.add(person);
+    }
 
+    public  void addSecretayList(Secretary person){
+        this.SecretaryList.add(person);
+    }
     public Leaders createLeadersAccount(String email, String fullname, String birthdate, String password, String phone,String id){
-        return new Leaders(email,fullname,birthdate,password,phone , id);
+        Leaders leader= new Leaders(email,fullname,birthdate,password,phone , id,this.getId());
+        this.addLeaderList(leader);
+        return leader;
     }
 
     public Secretary createSecretaryAccount(String email, String fullname, String birthdate, String password, String phone ,String id){
-        return new Secretary(email,fullname,birthdate,password,phone,id);
+        Secretary sec = new Secretary(email,fullname,birthdate,password,phone,id,this.getId());
+        this.addSecretayList(sec);
+        return sec;
     }
 
     @Override

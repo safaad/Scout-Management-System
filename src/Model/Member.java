@@ -8,29 +8,16 @@ public class Member extends Person {
     private String mid;
     private Leaders Leader;
 
-    public Member(){
-        super();
-        this.rank=null;
-        this.evaluation=null;
-        this.Leader=null;
-        this.mid=null;
-    }
-    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation ) {
-        super(email, fullname, birthdate, password, phone);
-        this.rank = rank;
-        this.evaluation = evaluation;
-    }
-    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , Leaders leader) {
-        super(email, fullname, birthdate, password, phone);
+    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , Leaders leader,String mid) {
+        super(email, fullname, birthdate, password, phone,mid);
         this.rank = rank;
         this.evaluation = evaluation;
         this.Leader=leader;
     }
 
-    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , String mid, Leaders leader) {
-        super(email, fullname, birthdate, password, phone);
+    public Member(String email, String fullname, String birthdate, String password, String phone, String rank,  Leaders leader,String mid) {
+        super(email, fullname, birthdate, password, phone,mid);
         this.rank = rank;
-        this.evaluation = evaluation;
         this.Leader=leader;
         this.mid=mid;
     }

@@ -33,12 +33,12 @@ public class Main extends Application {
     public static void main(String[] args) {
         try {
             Fill(Members, Leaders, Item);
-            for(int i=0 ;i<Leaders.size();i++){
-                System.out.println(Leaders.get(i).getId());
-            }
-            for(int i=0 ;i<Secretary.size();i++){
-                System.out.println(Secretary.get(i).getId());
-            }
+//            for(int i=0 ;i<Leaders.size();i++){
+//                System.out.println(Leaders.get(i).getId());
+//            }
+//            for(int i=0 ;i<Secretary.size();i++){
+//                System.out.println(Secretary.get(i).getId());
+//            }
         }catch (Exception e){
             System.out.println("Error while reading from the database");
         }
@@ -73,10 +73,17 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String deanid = resultSet.getString("deanid");
             String type = resultSet.getString("type");
-            if(type.equals("Leader"))
-                Leaders.add((Leaders) PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
-            else
-                Secretary.add((Secretary) PersonFactory.getPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid));
+            if(type.equals("Leader")){
+                Leaders person=(Leaders) BuilderPerson.buildPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid);
+                Dean.getDean().addLeaderList(person);
+                Leaders.add(person);
+                System.out.println(pid+person.getId());
+            }
+            else{
+                Secretary person=(Secretary) BuilderPerson.buildPerson(Dean.getDean(),type,email, name,birthdate,pass, phone, pid);
+                Dean.getDean().addSecretayList(person);
+                Secretary.add(person);
+            }
         }
         Dean.getDean().setLeaderList(Leaders);
         Dean.getDean().setSecretaryList(Secretary);
@@ -94,7 +101,7 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String evaluation = resultSet.getString("evaluation");
             String lid = resultSet.getString("lid");
-            Members.add(PersonFactory.getMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank, evaluation,mid));
+            Members.add(BuilderPerson.buildMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank,mid));
         }
 
         qury ="select * from Items";
