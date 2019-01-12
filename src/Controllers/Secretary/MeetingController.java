@@ -16,6 +16,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -37,8 +38,11 @@ public class MeetingController implements Initializable {
     Label etxt;
     @FXML
     public void refresh() throws Exception {
+        sub.setDisable(false);
         date.getEditor().clear();
         title.clear();
+        stxt.setVisible(false);
+        stxt.setVisible(false);
         ObservableList<String> items= FXCollections.observableArrayList();
         listview.getSelectionModel().clearSelection();
         items.add("Dean ;"+Dean.getDean().getId()+";" + Dean.getDean().getFullname());
@@ -69,7 +73,7 @@ public class MeetingController implements Initializable {
             etxt.setVisible(true);
             return;
         }
-        d=value.format(formatter);
+        d=""+value.getYear()+"-"+value.getMonthValue()+"-"+value.getDayOfMonth();
         for(Secretary s:Main.Secretary){
             if(s.getId().equals(DataBaseConnection.ID)){
                 sec=s;
@@ -96,27 +100,30 @@ public class MeetingController implements Initializable {
             }
             f1=false;
         }
+        sub.setDisable(true);
         m=new Meeting(title.getText(),d,sec);
         m.invite(invitees);
         Main.Meetings.add(m);
         String query ="insert into meeting(mdate,objective) values('"+d+"','"+title.getText()+"')";
         PreparedStatement prep=con.prepareStatement(query);
         prep.execute();
-        query="select meid from meeting where mdate = "+d+" and objective = "+title.getText();
-        prep=con.prepareStatement(query);
-        ResultSet res=prep.executeQuery();
-        String meid = res.getString("meid");
+        query="select * from meeting where mdate= '"+d+"' and objective ='"+title.getText().toString()+"'";
+        Statement prep1=con.createStatement();
+
+
+        ResultSet res=prep1.executeQuery(query);
+        res.next();
+        String meid = res.getString(1);
         for(String line:selected){
             String[] words=line.split(";");
             query = "insert into attendmeetings values('"+words[1]+"','"+meid+"','"+ DataBaseConnection.ID + "')";
             prep=con.prepareStatement(query);
             prep.execute();
         }
-        sub.setDisable(true);
+
         stxt.setVisible(true);
 
     }
-
     @FXML
     public void cancel(ActionEvent e) throws Exception {
         Stage S = (Stage) ((Node) e.getSource()).getScene().getWindow();
