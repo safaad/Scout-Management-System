@@ -6,17 +6,17 @@ import Model.Leaders;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-
-import java.awt.event.ActionEvent;
 import Model.Member;
 
 public class MemberView {
     @FXML
     AnchorPane frame;
     @FXML
-    Label good,bad,excellent,name,email,rank;
+    Label good,bad,excel,name,email,rank;
+    @FXML
     ImageView bronze,silver,gold;
     @FXML
     public void viewRankPane(javafx.event.ActionEvent event) throws Exception{
@@ -52,7 +52,7 @@ public class MemberView {
             good.setVisible(true);
         }
         else{
-            excellent.setVisible(true);
+            excel.setVisible(true);
             gold.setVisible(true);
         }
         }

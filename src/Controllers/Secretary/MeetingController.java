@@ -109,8 +109,6 @@ public class MeetingController implements Initializable {
         prep.execute();
         query="select * from meeting where mdate= '"+d+"' and objective ='"+title.getText().toString()+"'";
         Statement prep1=con.createStatement();
-
-
         ResultSet res=prep1.executeQuery(query);
         res.next();
         String meid = res.getString(1);

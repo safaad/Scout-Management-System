@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Main extends Application {
@@ -31,8 +32,8 @@ public class Main extends Application {
     public static void main(String[] args) {
         try {
             Fill(Members, Leaders, Item);
-            for(Member m:Members)
-                System.out.println(m.getEvaluation());
+            for(Meeting m:Meetings)
+                System.out.println(m.getMeid());
         }catch (Exception e){
             System.out.println("Error while reading from the database");
         }
@@ -95,7 +96,10 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String evaluation = resultSet.getString("evaluation");
             String lid = resultSet.getString("lid");
-            Members.add(BuilderPerson.buildMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank,evaluation,mid));
+
+            Member m=BuilderPerson.buildMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank,evaluation,mid);
+            System.out.println(m.getId());
+            Members.add(m);
         }
 
         qury ="select * from Items";
@@ -114,9 +118,10 @@ public class Main extends Application {
             String meid=resultSet.getString("meid");
             String obj=resultSet.getString("objective");
             String date=resultSet.getString("mdate");
-            String query="select * from attendmeetings where meid ="+meid;
-            PreparedStatement ps=con.prepareStatement(query);
-            ResultSet res=ps.executeQuery();
+
+            String query="select * from attendmeetings where meid= '"+meid+"'";
+            Statement prep1=con.createStatement();
+            ResultSet res=prep1.executeQuery(query);
             ArrayList<Person> invitees=new ArrayList<Person>();
             String sid=res.getString("sid");
             Secretary sec=null;
@@ -176,7 +181,7 @@ public class Main extends Application {
     }
     public static Model.Member findMember(String mid){
         for(Member m:Members)
-            if(mid.equals(m.getMid()))
+            if(mid.equals(m.getId()))
                 return m;
         return null;
     }

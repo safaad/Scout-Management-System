@@ -2,48 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01035e81-6172-47ce-89f8-fe7155d4e354" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Views/LeaderView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Views/MeetingView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Views/MemberView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Views/MemberViewDean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Views/MemberViewLeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Views/StockView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Views/Views.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/DeanView/LeaderView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/DeanView/MeetingView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/DeanView/StockView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/DeanView/memberViewDean.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/LeaderAdding/LeaderEvaluation.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/LeaderView/memberViewLeader.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/MemberView/leaderMember.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/MemberView/rankView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Controllers/LeaderAdding/framLeaderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/Controllers/LeaderAdding/framLeaderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Controllers/Secretary/SecretaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/Controllers/Secretary/SecretaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Driver/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/Driver/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/GUI/DeanView/DeanVeiw.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/GUI/DeanView/DeanVeiw.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/GUI/LeaderAdding/frameAddLeader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/GUI/LeaderAdding/frameAddLeader.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/GUI/LeaderView/LeaderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/GUI/LeaderView/LeaderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/GUI/Member.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/GUI/Member.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/GUI/Secretary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/GUI/Secretary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Model/BuilderPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/Model/BuilderPerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Model/Leaders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/Model/Leaders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Model/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/Model/Meeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Model/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI-Project/Model/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/LeaderAdding/framLeaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/LeaderAdding/framLeaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Secretary/SecretaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Secretary/SecretaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI-Project/Controllers/Views/MemberView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Secretary/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Secretary/MeetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Views/MemberView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Views/MemberView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Driver/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/DeanView/DeanVeiw.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/DeanView/DeanVeiw.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LeaderAdding/frameAddLeader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LeaderAdding/frameAddLeader.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LeaderView/LeaderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LeaderView/LeaderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Member.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Secretary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Secretary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/BuilderPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BuilderPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Leaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Leaders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Member.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Driver/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+            <state relative-caret-position="97">
+              <caret line="121" column="40" selection-start-line="121" selection-start-column="40" selection-end-line="121" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#738#747#0" expanded="true" />
@@ -69,19 +33,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/DeanView/MeetingView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="14" selection-end-column="15" />
+            <state relative-caret-position="17">
+              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/LeaderAdding/frameAddLeader.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -96,8 +53,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/BuilderPerson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="128">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -105,31 +71,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Member.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-248">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1457#1458#0" expanded="true" />
                 <element signature="e#1490#1491#0" expanded="true" />
                 <element signature="e#1542#1543#0" expanded="true" />
                 <element signature="e#1586#1587#0" expanded="true" />
-                <element signature="e#1879#1880#0" expanded="true" />
-                <element signature="e#1905#1906#0" expanded="true" />
-                <element signature="e#1943#1944#0" expanded="true" />
-                <element signature="e#1973#1974#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1470#1471#0" expanded="true" />
+                <element signature="e#1538#1539#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/Views/MemberView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state relative-caret-position="103">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="166" lean-forward="true" selection-start-line="9" selection-start-column="166" selection-end-line="9" selection-end-column="166" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/Secretary/MeetingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="108" column="23" lean-forward="true" selection-start-line="108" selection-start-column="23" selection-end-line="111" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -137,32 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Leaders.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/Views/MeetingView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="126">
+              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -180,6 +141,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>show</find>
+      <find>d</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,12 +156,10 @@
         <option value="$PROJECT_DIR$/src/Model/Secretary.java" />
         <option value="$PROJECT_DIR$/src/Model/PersonFactory.java" />
         <option value="$PROJECT_DIR$/src/Model/Dean.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/Secretary/MeetingController.java" />
         <option value="$PROJECT_DIR$/src/GUI/LeaderAdding/frameAddLeader.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/LeaderAdding/LeaderEvaluation.fxml" />
         <option value="$PROJECT_DIR$/src/Model/BuilderPerson.java" />
         <option value="$PROJECT_DIR$/src/Model/Leaders.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java" />
         <option value="$PROJECT_DIR$/src/Controllers/Views.java" />
         <option value="$PROJECT_DIR$/src/GUI/DeanView/LeaderView.fxml" />
         <option value="$PROJECT_DIR$/src/Controllers/LeaderAdding/framLeaderController.java" />
@@ -211,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/Controllers/Views/MeetingView.java" />
         <option value="$PROJECT_DIR$/src/GUI/DeanView/MeetingView.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/DeanView/memberViewDean.fxml" />
-        <option value="$PROJECT_DIR$/src/Model/Member.java" />
         <option value="$PROJECT_DIR$/src/Controllers/Views/MemberViewDean.java" />
         <option value="$PROJECT_DIR$/src/Controllers/Views/MemberViewLeader.java" />
         <option value="$PROJECT_DIR$/src/GUI/LeaderView/memberViewLeader.fxml" />
@@ -219,16 +178,19 @@
         <option value="$PROJECT_DIR$/src/GUI/DeanView/StockView.fxml" />
         <option value="$PROJECT_DIR$/src/Model/Stock.java" />
         <option value="$PROJECT_DIR$/src/Controllers/Views/StockView.java" />
-        <option value="$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/MemberView/leaderMember.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/MemberView/rankView.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Member.fxml" />
-        <option value="$PROJECT_DIR$/src/Driver/Main.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java" />
+        <option value="$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml" />
         <option value="$PROJECT_DIR$/src/Controllers/Views/MemberView.java" />
+        <option value="$PROJECT_DIR$/src/Model/Member.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/Secretary/MeetingController.java" />
+        <option value="$PROJECT_DIR$/src/Driver/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -301,40 +263,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Scout-Management-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scout-Management-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="DeanView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Scout-Management-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scout-Management-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="LeaderAdding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Scout-Management-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scout-Management-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="LeaderView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Scout-Management-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scout-Management-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="MemberView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Scout-Management-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scout-Management-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -342,7 +270,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547345289937" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547348544292" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -391,7 +319,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.17397882" />
@@ -403,7 +331,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33387887" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3666121" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,7 +350,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.21785174" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.17397882" />
       <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" weight="0.18003026" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -431,7 +359,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3764321" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33387887" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -487,13 +415,6 @@
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/Secretary/MeetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="24" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/LeaderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -531,13 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -678,14 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MemberView/leaderMember.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -727,47 +633,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/Views/MeetingView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Leaders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1542#1543#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1879#1880#0" expanded="true" />
-            <element signature="e#1905#1906#0" expanded="true" />
-            <element signature="e#1943#1944#0" expanded="true" />
-            <element signature="e#1973#1974#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -779,29 +650,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Leaders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/BuilderPerson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Driver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#738#747#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/DeanView/MeetingView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="14" selection-end-column="15" />
+        <state relative-caret-position="128">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -809,12 +675,71 @@
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/DeanView/MeetingView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MemberView/evalView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="166" lean-forward="true" selection-start-line="9" selection-start-column="166" selection-end-line="9" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/Views/MemberView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state relative-caret-position="103">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1542#1543#0" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/Secretary/MeetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="108" column="23" lean-forward="true" selection-start-line="108" selection-start-column="23" selection-end-line="111" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/LeaderAdding/leaderEvaluation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Driver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="121" column="40" selection-start-line="121" selection-start-column="40" selection-end-line="121" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#738#747#0" expanded="true" />
           </folding>
         </state>
       </provider>

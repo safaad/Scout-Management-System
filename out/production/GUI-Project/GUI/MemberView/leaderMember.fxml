@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controllers.Views.MemberView"
-            prefHeight="395.0" prefWidth="458.0">
 
+<AnchorPane prefHeight="395.0" prefWidth="458.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MemberView">
+   <children>
+      <Label layoutX="87.0" layoutY="87.0" prefHeight="27.0" prefWidth="119.0" text="Your Leader Is :" textFill="#3f157e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="email" layoutX="245.0" layoutY="158.0" prefHeight="17.0" prefWidth="166.0" text="email" textFill="#3f157e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="245.0" layoutY="92.0" prefHeight="17.0" prefWidth="166.0" text="name" textFill="#3f157e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="154.0" prefHeight="25.0" prefWidth="119.0" text="His Email :" textFill="#3f157e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="200.0" fitWidth="139.0" layoutX="40.0" layoutY="179.0">
+         <image>
+            <Image url="@../../Pic/hello.jpg" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>

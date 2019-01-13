@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controllers.Views.MemberView"
-            prefHeight="395.0" prefWidth="458.0">
 
+<AnchorPane prefHeight="395.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MemberView">
+   <children>
+      <Label layoutX="79.0" layoutY="83.0" prefHeight="32.0" prefWidth="142.0" text="Your Rank Is" textFill="#3f157e">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="rank" layoutX="111.0" layoutY="134.0" prefHeight="83.0" prefWidth="221.0" text="Rank" textFill="#3f157e">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="81.0" fitWidth="200.0" layoutX="208.0" layoutY="261.0">
+         <image>
+            <Image url="@../../Pic/images.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>

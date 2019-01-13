@@ -7,7 +7,6 @@ import java.util.Observable;
 public class Member extends Person {
     private String rank;
     private String evaluation;
-    private String mid;
     private Leaders Leader;
     private String lid;
 //    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , Leaders leader,String mid,String combo) {
@@ -23,13 +22,6 @@ public class Member extends Person {
         this.evaluation = evaluation;
         this.Leader=leader;
         this.lid=leader.getId();
-    }
-
-    public Member(String email, String fullname, String birthdate, String password, String phone, String rank,  Leaders leader,String mid) {
-        super(email, fullname, birthdate, password, phone,mid);
-        this.rank = rank;
-        this.Leader=leader;
-        this.mid=mid;
     }
 
     public String getRank() {
@@ -48,13 +40,6 @@ public class Member extends Person {
         this.evaluation = evaluation;
     }
 
-    public String getMid() {
-        return mid;
-    }
-
-    public void setMid(String mid) {
-        this.mid = mid;
-    }
 
     public Leaders getLeader() {
         return Leader;

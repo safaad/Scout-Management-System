@@ -24,7 +24,7 @@ public class leaderEvaluation implements Initializable {
     Connection con = DataBaseConnection.getConnection();
     private static String lid=DataBaseConnection.ID;
     @FXML
-    TableView tableEv;
+    TableView<Member> tableEv;
     @FXML
     Label stxt,mtxt;
     @FXML
@@ -41,8 +41,9 @@ public class leaderEvaluation implements Initializable {
         tableEv.getColumns().clear();
         Leaders leader= Main.findLeader(lid);
         ObservableList<String> items = FXCollections.observableArrayList("1","2","3","4","5");
-        midCol.setCellValueFactory(new PropertyValueFactory<Member,String>("mid"));
+        midCol.setCellValueFactory(new PropertyValueFactory<Member,String>("id"));
         memCol.setCellValueFactory(new PropertyValueFactory<Member,String>("fullname"));
+        evalCol.setEditable(true);
         evalCol.setCellFactory(ComboBoxTableCell.forTableColumn(items));
         for(Member m :leader.getMemberList()){
             data.add(m);
