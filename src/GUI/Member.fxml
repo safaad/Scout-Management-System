@@ -8,20 +8,20 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MemberView">
    <children>
-      <Button layoutX="14.0" layoutY="104.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="184.0" style="-fx-background-color: #3f157e;" text="View Evaluation" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#viewEvalPane" prefHeight="54.0"
+              prefWidth="184.0" style="-fx-background-color: #3f157e;" text="View Evaluation" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="182.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="184.0" style="-fx-background-color: #3f157e;" text="View Rank" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="182.0" mnemonicParsing="false" onAction="#viewRankPane" prefHeight="54.0" prefWidth="184.0" style="-fx-background-color: #3f157e;" text="View Rank" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="259.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="184.0" style="-fx-background-color: #3f157e;" text="Who's my Leader" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="259.0" mnemonicParsing="false" onAction="#viewLeaderPane" prefHeight="54.0" prefWidth="184.0" style="-fx-background-color: #3f157e;" text="Who's my Leader" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

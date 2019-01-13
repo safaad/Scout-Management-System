@@ -19,4 +19,12 @@ public class SecretaryController {
         s.show();
 
     }
+    @FXML
+    public void seeEvaluation(ActionEvent event) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("../../GUI/DeanView/memberViewDean.fxml"));
+        Stage s =new Stage();
+        s.setScene(new Scene(root));
+        s.setResizable(false);
+        s.show();
+    }
 }

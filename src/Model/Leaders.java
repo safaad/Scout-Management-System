@@ -34,8 +34,8 @@ public class Leaders extends Person {
         }
         return false;
     }
-    public Member createMemberAccount(String email, String fullname, String birthdate, String password, String phone, String rank,String mid ){
-        Member m= new Member(email,fullname,birthdate,password,phone,rank,this,mid);
+    public Member createMemberAccount(String email, String fullname, String birthdate, String password, String phone, String rank,String evaluation,String mid ){
+        Member m= new Member(email,fullname,birthdate,password,phone,rank,evaluation,this,mid);
         this.memberList.add(m);
         return m;
     }

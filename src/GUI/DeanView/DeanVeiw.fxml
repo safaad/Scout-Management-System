@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="486.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="dpane" prefHeight="400.0" prefWidth="486.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.Views">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="306.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Pic/842-512.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="142.0" fitWidth="142.0" layoutX="38.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Pic/download.jpeg" />
          </image>
@@ -24,34 +24,44 @@
             <Image url="@../../Pic/scoutcamp.png" />
          </image>
       </ImageView>
-      <Label layoutX="56.0" layoutY="53.0" text="Let's see what " textFill="#3f157e">
+      <Label layoutX="185.0" layoutY="13.0" text="Let's see what " textFill="#3f157e">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="82.0" text="you want to View ??" textFill="#3f157e">
+      <Label layoutX="164.0" layoutY="40.0" prefHeight="35.0" prefWidth="180.0" text="you want to View" textFill="#3f157e">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="304.0" layoutY="163.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #3f157e;" text="Leaders" textFill="WHITE">
+      <Button layoutX="304.0" layoutY="163.0" mnemonicParsing="false" onAction="#viewLeaders" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #3f157e;" text="Leaders" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="304.0" layoutY="351.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #3f157e;" text="Stock" textFill="WHITE">
+      <Button layoutX="304.0" layoutY="351.0" mnemonicParsing="false" onAction="#dviewStock" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #3f157e;" text="Stock" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="38.0" layoutY="351.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #3f157e;" text="Member" textFill="WHITE">
+      <Button layoutX="38.0" layoutY="351.0" mnemonicParsing="false" onAction="#viewMembersDean" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #3f157e;" text="Member" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="20.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="144.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Pic/logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="34.0" layoutY="163.0" mnemonicParsing="false" onAction="#dviewMeeting" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #3f157e;" text="Meeting" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="170.0" fitWidth="169.0" layoutX="25.0" layoutY="14.0">
+         <image>
+            <Image url="@../../Pic/meeting.png" />
          </image>
       </ImageView>
    </children>

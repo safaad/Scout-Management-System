@@ -43,14 +43,20 @@ public class Meeting extends Observable {
     private String Date;
     private ArrayList<Person> invities;
     private Secretary sec;
-
+    private String meid;
     public Meeting(String objective, String date,Secretary s) {
         this.objective = objective;
         Date = date;
         sec=s;
         invities=new ArrayList<Person>();
     }
-
+    public Meeting(String meid,String objective, String date,Secretary s) {
+        this.objective = objective;
+        Date = date;
+        sec=s;
+        invities=new ArrayList<Person>();
+        this.meid=meid;
+    }
     public void setInvities(ArrayList<Person> p){
         invities=p;
     }
@@ -66,5 +72,11 @@ public class Meeting extends Observable {
         notifyObservers();
     }
 
+    public String getMeid() {
+        return meid;
+    }
 
+    public void setMeid(String meid) {
+        this.meid = meid;
+    }
 }

@@ -21,9 +21,9 @@ public class BuilderPerson {
         }
 
 
-    public static Member buildMember(Leaders l, String email, String fullname, String birthdate, String password, String phone, String rank, String mid) {
+    public static Member buildMember(Leaders l, String email, String fullname, String birthdate, String password, String phone, String rank,String evaluation, String mid) {
         Member m = null;
-        m = l.createMemberAccount(email, fullname, birthdate, password, phone, rank, mid);
+        m = l.createMemberAccount(email, fullname, birthdate, password, phone, rank,evaluation, mid);
         return m;
     }
 

@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="486.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LeaderAdding.framLeaderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="486.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LeaderAdding.framLeaderController">
    <children>
       <ImageView fitHeight="334.0" fitWidth="476.0" layoutX="5.0" layoutY="66.0">
          <image>
             <Image url="@../../Pic/fram.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="160.0" layoutY="18.0" mnemonicParsing="false" onAction="#members" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #3f157e;" text="Members" textFill="WHITE">
+      <Button layoutX="121.0" layoutY="18.0" mnemonicParsing="false" onAction="#members" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #3f157e;" text="Members" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="242.0" layoutY="18.0" mnemonicParsing="false" onAction="#item" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: #3f157e;" text="Items" textFill="WHITE">
+      <Button layoutX="204.0" layoutY="18.0" mnemonicParsing="false" onAction="#item" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: #3f157e;" text="Items" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -43,5 +43,10 @@
             </Label>
          </children>
       </AnchorPane>
+      <Button layoutX="276.0" layoutY="18.0" mnemonicParsing="false" onAction="#addEvaluation" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #3f157e;" text="Evaluation" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

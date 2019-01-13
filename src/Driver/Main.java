@@ -6,8 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import javax.swing.plaf.metal.MetalMenuBarUI;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,12 +31,8 @@ public class Main extends Application {
     public static void main(String[] args) {
         try {
             Fill(Members, Leaders, Item);
-//            for(int i=0 ;i<Leaders.size();i++){
-//                System.out.println(Leaders.get(i).getId());
-//            }
-//            for(int i=0 ;i<Secretary.size();i++){
-//                System.out.println(Secretary.get(i).getId());
-//            }
+            for(Member m:Members)
+                System.out.println(m.getEvaluation());
         }catch (Exception e){
             System.out.println("Error while reading from the database");
         }
@@ -101,7 +95,7 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String evaluation = resultSet.getString("evaluation");
             String lid = resultSet.getString("lid");
-            Members.add(BuilderPerson.buildMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank,mid));
+            Members.add(BuilderPerson.buildMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank,evaluation,mid));
         }
 
         qury ="select * from Items";
@@ -129,12 +123,12 @@ public class Main extends Application {
             for(Secretary s : Main.Secretary)
                 if(s.getId().equals(sid))
                     sec=s;
-
             while(res.next()){
                 String pid=res.getString("pid");
                 boolean f1=false;
-                if(Dean.getDean().getId().equals(pid))
+                if(Dean.getDean().getId().equals(pid)){
                     invitees.add(Dean.getDean());
+                }
                 for(Leaders l:Main.Leaders){
                     if(l.getId().equals(pid)){
                         invitees.add(l);
@@ -144,20 +138,33 @@ public class Main extends Application {
                 }
                 if(!f1){
                     for(Secretary s : Main.Secretary)
-                        if(s.getId().equals(pid))
+                        if(s.getId().equals(pid)){
                             invitees.add(s);
+                        }
 
                 }
                 f1=false;
-                Meeting m=new Meeting(obj,date,sec);
-
+                Meeting m=new Meeting(meid,obj,date,sec);
                 Main.Meetings.add(m);
                 m.setInvities(invitees);
+                for(Person p:invitees)
+                    p.addAttendedMeetings(m);
             }
+
         }
 
     }
-
+    public static Person findPerson(String pid){
+        if(pid.equals(Dean.getDean().getId()))
+            return Dean.getDean();
+        for(Secretary s:Secretary)
+            if(pid.equals(s.getId()))
+                return s;
+        for(Model.Leaders l:Leaders)
+            if(pid.equals(l.getId()))
+                return l;
+        return null;
+    }
 
     public static Leaders findLeader(String mid ){
         for(int i=0;i<Leaders.size();i++){
@@ -165,6 +172,12 @@ public class Main extends Application {
                 return Leaders.get(i);
             }
         }
+        return null;
+    }
+    public static Model.Member findMember(String mid){
+        for(Member m:Members)
+            if(mid.equals(m.getMid()))
+                return m;
         return null;
     }
 }
