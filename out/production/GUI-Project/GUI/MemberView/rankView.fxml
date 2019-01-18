@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="395.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MemberView">
+<AnchorPane prefHeight="395.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MemberView">
    <children>
       <Label layoutX="79.0" layoutY="83.0" prefHeight="32.0" prefWidth="142.0" text="Your Rank Is" textFill="#3f157e">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="rank" layoutX="111.0" layoutY="134.0" prefHeight="83.0" prefWidth="221.0" text="Rank" textFill="#3f157e">
+      <Label fx:id="ranks" layoutX="111.0" layoutY="134.0" prefHeight="83.0" prefWidth="221.0" text="Rank" textFill="#3f157e">
          <font>
             <Font size="36.0" />
          </font>

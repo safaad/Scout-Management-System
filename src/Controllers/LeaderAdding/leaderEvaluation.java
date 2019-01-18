@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -29,8 +30,10 @@ public class leaderEvaluation implements Initializable {
     Label stxt,mtxt;
     @FXML
     Button sub;
+//    @FXML
+//    TableColumn evalCol,midCol,memCol;
     @FXML
-    TableColumn evalCol,midCol,memCol;
+    TableColumn<Member, String> evalCol, midCol, memCol;
     @FXML
     public void fillEvaluation(ActionEvent e)throws Exception{
 
@@ -43,12 +46,19 @@ public class leaderEvaluation implements Initializable {
         ObservableList<String> items = FXCollections.observableArrayList("1","2","3","4","5");
         midCol.setCellValueFactory(new PropertyValueFactory<Member,String>("id"));
         memCol.setCellValueFactory(new PropertyValueFactory<Member,String>("fullname"));
+        evalCol.setCellValueFactory(new PropertyValueFactory<>("evaluation"));
         evalCol.setEditable(true);
+        midCol.setEditable(true);
+        midCol.setCellFactory(TextFieldTableCell.forTableColumn());
         evalCol.setCellFactory(ComboBoxTableCell.forTableColumn(items));
+        evalCol.setOnEditCommit(event -> {
+            final String newValue = event.getNewValue() != null ? event.getNewValue() : event.getOldValue();
+            event.getTableView().getItems().get(event.getTablePosition().getRow()).setEvaluation(newValue);
+        });
         for(Member m :leader.getMemberList()){
             data.add(m);
         }
         tableEv.setItems(data);
-        tableEv.getColumns().addAll(midCol,memCol,evalCol);
+        //tableEv.getColumns().addAll(midCol,memCol,evalCol);
     }
 }

@@ -8,10 +8,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MemberView">
+<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MemberView">
    <children>
-      <Button layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#viewEvalPane" prefHeight="54.0"
-              prefWidth="184.0" style="-fx-background-color: #3f157e;" text="View Evaluation" textFill="WHITE">
+      <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="631.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pic/logout-64.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#viewEvalPane" prefHeight="54.0" prefWidth="184.0" style="-fx-background-color: #3f157e;" text="View Evaluation" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -71,5 +75,6 @@
             <Image url="@../Pic/name.png" />
          </image>
       </ImageView>
+      <Button layoutX="635.0" layoutY="5.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="23.0" style="-fx-background-color: transperet;" />
    </children>
 </AnchorPane>

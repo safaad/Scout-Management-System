@@ -101,16 +101,17 @@ public class Main extends Application {
             System.out.println(m.getId());
             Members.add(m);
         }
+//
+//        qury ="select * from Items";
+//        preparedStmt = con.prepareStatement(qury);
+//        resultSet = preparedStmt.executeQuery();
+//        while(resultSet.next()){
+//            String id = resultSet.getString("itid");
+//            String name = resultSet.getString("iname");
+//            String quantity = resultSet.getString("quantity");
+//            Item.add(new Item(id,name,quantity));
+//        }
 
-        qury ="select * from Items";
-        preparedStmt = con.prepareStatement(qury);
-        resultSet = preparedStmt.executeQuery();
-        while(resultSet.next()){
-            String id = resultSet.getString("itid");
-            String name = resultSet.getString("iname");
-            String quantity = resultSet.getString("quantity");
-            Item.add(new Item(id,name,quantity));
-        }
         qury="select * from Meeting";
         preparedStmt=con.prepareStatement(qury);
         resultSet=preparedStmt.executeQuery();
