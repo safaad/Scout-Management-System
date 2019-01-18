@@ -45,4 +45,10 @@ public class DeanController {
         S.setScene(new Scene(root));
         S.show();
     }
+
+    public void messageClick(ActionEvent event) {
+    }
+
+    public void changePass(ActionEvent event) {
+    }
 }

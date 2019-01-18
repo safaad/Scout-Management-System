@@ -94,6 +94,8 @@ public class MemberView {
         S.show();
     }
 
+    public void changePass(ActionEvent event) {
+    }
 }
 
 

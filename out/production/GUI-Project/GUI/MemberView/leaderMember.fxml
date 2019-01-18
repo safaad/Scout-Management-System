@@ -24,7 +24,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="154.0" prefHeight="25.0" prefWidth="119.0" text="His Email :" textFill="#3f157e">
+      <Label layoutX="89.0" layoutY="154.0" prefHeight="25.0" prefWidth="119.0" text="Email :" textFill="#3f157e">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

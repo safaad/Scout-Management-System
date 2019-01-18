@@ -2,13 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanController">
+<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanController">
    <children>
       <ImageView fitHeight="44.0" fitWidth="32.0" layoutX="621.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <image>
@@ -84,6 +85,28 @@
             <Image url="@../Pic/scout-sign.png" />
          </image>
       </ImageView>
-      <Button layoutX="621.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transperent;" />
+      <Button layoutX="621.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transperent;">
+         <tooltip>
+            <Tooltip style="-fx-background-color: #3f157e;" text="Logout" />
+         </tooltip></Button>
+       <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="577.0" layoutY="7.0">
+           <image>
+               <Image url="@../Pic/mail_icon.png" />
+           </image>
+       </ImageView>
+       <Button fx:id="messageButton" layoutX="585.0" layoutY="18.0" mnemonicParsing="false" onAction="#messageClick" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: transperent;">
+         <tooltip>
+            <Tooltip style="-fx-background-color: #3f157e;" text="Messages" />
+         </tooltip></Button>
+      <ImageView fitHeight="39.0" fitWidth="44.0" layoutX="539.0" layoutY="7.0">
+         <image>
+            <Image url="@../Pic/changePassword.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="changePassB" layoutX="545.0" layoutY="4.0" mnemonicParsing="false" onAction="#changePass" prefHeight="39.0" prefWidth="32.0" style="-fx-background-color: transperent;">
+         <tooltip>
+            <Tooltip style="-fx-background-color: #3f157e;" text="Change Password" />
+         </tooltip>
+      </Button>
    </children>
 </AnchorPane>
