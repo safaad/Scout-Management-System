@@ -3,7 +3,11 @@ package Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class DeanController {
 
@@ -34,4 +38,11 @@ public class DeanController {
         pane.getChildren().setAll(pane1);
     }
 
+    @FXML
+    public void logout (ActionEvent event) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Login.fxml"));
+        Stage S = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        S.setScene(new Scene(root));
+        S.show();
+    }
 }

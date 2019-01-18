@@ -10,6 +10,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: fffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LeaderController">
    <children>
+      <ImageView fitHeight="28.0" fitWidth="36.0" layoutX="635.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pic/logout-64.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="61.0" fitWidth="200.0" layoutX="220.0">
          <image>
             <Image url="@../Pic/name.png" />
@@ -80,5 +85,6 @@
             <Image url="@../Pic/scout-sign.png" />
          </image>
       </ImageView>
+      <Button layoutX="640.0" layoutY="7.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: transperent;" />
    </children>
 </AnchorPane>

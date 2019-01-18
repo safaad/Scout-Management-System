@@ -10,6 +10,11 @@
 
 <AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanController">
    <children>
+      <ImageView fitHeight="44.0" fitWidth="32.0" layoutX="621.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../Pic/logout-64.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="59.0" fitWidth="200.0" layoutX="275.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../Pic/name.png" />
@@ -79,5 +84,6 @@
             <Image url="@../Pic/scout-sign.png" />
          </image>
       </ImageView>
+      <Button layoutX="621.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transperent;" />
    </children>
 </AnchorPane>
