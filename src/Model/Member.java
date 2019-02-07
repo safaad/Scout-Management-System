@@ -1,27 +1,26 @@
 package Model;
 
+import javafx.geometry.Orientation;
 import javafx.scene.control.ComboBox;
+import org.controlsfx.control.Rating;
 
 import java.util.Observable;
 
 public class Member extends Person {
     private String rank;
-    private String evaluation;
+    private int evaluation;
     private Leaders Leader;
     private String lid;
-//    public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , Leaders leader,String mid,String combo) {
-//        super(email, fullname, birthdate, password, phone,mid);
-//        this.rank = rank;
-//        this.evaluation = evaluation;
-//        this.Leader=leader;
-//        this.comboBox=new ComboBox<String>();
-//    }
+    private Rating rating=null;
     public Member(String email, String fullname, String birthdate, String password, String phone, String rank, String evaluation , Leaders leader,String mid) {
         super(email, fullname, birthdate, password, phone,mid);
         this.rank = rank;
-        this.evaluation = evaluation;
+        this.evaluation = Integer.parseInt(evaluation);
         this.Leader=leader;
         this.lid=leader.getId();
+        rating = new Rating();
+        rating.setUpdateOnHover(true);
+        rating.setMax(5);
     }
 
     public String getRank() {
@@ -32,11 +31,11 @@ public class Member extends Person {
         this.rank = rank;
     }
 
-    public String getEvaluation() {
+    public int getEvaluation() {
         return evaluation;
     }
 
-    public void setEvaluation(String evaluation) {
+    public void setEvaluation(int evaluation) {
         this.evaluation = evaluation;
     }
 
@@ -56,12 +55,9 @@ public class Member extends Person {
     public void setLid(String lid) {
         this.lid = lid;
     }
-    //
-//    public ComboBox<String> getComboBox() {
-//        comboBox=new ComboBox<>();
-//        comboBox.getItems().addAll("0","1","2","3","4","5");
-//        return comboBox;
-//    }
+    public Rating getRating() {
+        return rating;
+    }
 
     @Override
     public void accept(PersonVisitor pv) {

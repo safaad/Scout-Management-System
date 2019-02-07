@@ -24,7 +24,6 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../GUI/Login.fxml"));
         primaryStage.setTitle("Login");
-        //primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
@@ -96,7 +95,6 @@ public class Main extends Application {
             String pass = resultSet.getString("pass");
             String evaluation = resultSet.getString("evaluation");
             String lid = resultSet.getString("lid");
-
             Member m=BuilderPerson.buildMember(findLeader(lid) , email, name,  birthdate,  pass,  phone,  rank,evaluation,mid);
             System.out.println(m.getId());
             Members.add(m);

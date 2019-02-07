@@ -4,19 +4,18 @@ import Driver.Main;
 import Model.DataBaseConnection;
 import Model.Leaders;
 import Model.Member;
-import com.mysql.cj.xdevapi.Table;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
+import org.controlsfx.control.Rating;
 
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -30,35 +29,40 @@ public class leaderEvaluation implements Initializable {
     Label stxt,mtxt;
     @FXML
     Button sub;
-//    @FXML
-//    TableColumn evalCol,midCol,memCol;
     @FXML
-    TableColumn<Member, String> evalCol, midCol, memCol;
+    TableColumn<Member, Rating> evalCol;
+    @FXML
+    TableColumn<Member, String> midCol;
+    @FXML
+    TableColumn<Member, String> memCol;
     @FXML
     public void fillEvaluation(ActionEvent e)throws Exception{
-
+        PreparedStatement statement ;
+        ObservableList<Member> rowsData = FXCollections.observableArrayList(tableEv.getItems());
+        for(Member m : rowsData){
+            String mid=m.getId();
+            int evaluation= (int) m.getRating().getRating();
+            Main.findMember(mid).setEvaluation(evaluation);
+            String query="UPDATE members set evaluation = "+evaluation+" WHERE mid = '"+mid+"'";
+            statement=con.prepareStatement(query);
+            statement.execute();
+        }
+        stxt.setVisible(true);
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tableEv.getItems().clear();
         tableEv.getColumns().clear();
         Leaders leader= Main.findLeader(lid);
-        ObservableList<String> items = FXCollections.observableArrayList("1","2","3","4","5");
         midCol.setCellValueFactory(new PropertyValueFactory<Member,String>("id"));
         memCol.setCellValueFactory(new PropertyValueFactory<Member,String>("fullname"));
-        evalCol.setCellValueFactory(new PropertyValueFactory<>("evaluation"));
-        evalCol.setEditable(true);
-        midCol.setEditable(true);
-        midCol.setCellFactory(TextFieldTableCell.forTableColumn());
-        evalCol.setCellFactory(ComboBoxTableCell.forTableColumn(items));
-        evalCol.setOnEditCommit(event -> {
-            final String newValue = event.getNewValue() != null ? event.getNewValue() : event.getOldValue();
-            event.getTableView().getItems().get(event.getTablePosition().getRow()).setEvaluation(newValue);
-        });
+        evalCol.setCellValueFactory(new PropertyValueFactory<Member, Rating>("rating"));
+        data.clear();
         for(Member m :leader.getMemberList()){
             data.add(m);
         }
+        tableEv.getColumns().addAll(midCol,memCol, evalCol);
         tableEv.setItems(data);
-        //tableEv.getColumns().addAll(midCol,memCol,evalCol);
+
     }
 }

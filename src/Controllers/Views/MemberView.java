@@ -67,7 +67,7 @@ public class MemberView {
         frame.getChildren().setAll(pane1);
         String mid = DataBaseConnection.ID;
         Member m = Main.findMember(mid);
-        String evaluation = m.getEvaluation();
+        String evaluation = String.valueOf(m.getEvaluation());
         if (evaluation.equals("0") || evaluation.equals("1") || evaluation.equals("2")) {
             bronze=(ImageView)pane1.getChildren().get(2);
             bronze.setVisible(true);

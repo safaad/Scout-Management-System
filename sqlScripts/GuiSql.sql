@@ -131,4 +131,5 @@ grant select ,show view on SMSdb.* to 'Leader'@'localhost';
 grant all privileges on SMSdb.Members to 'Leader'@'localhost';
 grant all privileges on SMSdb.Items to 'Leader'@'localhost';
 
-
+grant all privileges on SMSdb.Meeting to 'Leader'@'localhost';
+grant all privileges on SMSdb.attendmeetings to 'Leader'@'localhost';

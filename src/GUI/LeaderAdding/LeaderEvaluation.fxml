@@ -36,16 +36,16 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="stxt" layoutX="348.0" layoutY="28.0" prefHeight="29.0" prefWidth="92.0" text="Successful" textFill="BLUE" visible="false">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TableView fx:id="tableEv" layoutX="14.0" layoutY="17.0" prefHeight="366.0" prefWidth="320.0">
+      <TableView fx:id="tableEv" layoutX="14.0" layoutY="17.0" prefHeight="366.0" prefWidth="396.0">
          <columns>
             <TableColumn fx:id="midCol" prefWidth="69.0" text="Member Id" />
             <TableColumn fx:id="memCol" prefWidth="109.0" text="Member Name" />
-            <TableColumn fx:id="evalCol" prefWidth="140.0" text="Evaluation" />
+            <TableColumn fx:id="evalCol" prefWidth="217.0" text="Evaluation" />
          </columns></TableView>
+      <Label fx:id="stxt" layoutX="435.0" layoutY="355.0" prefHeight="29.0" prefWidth="92.0" text="Successful !!" textFill="BLUE" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
