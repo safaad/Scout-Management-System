@@ -102,11 +102,17 @@ public class MeetingController implements Initializable {
         }
         sub.setDisable(true);
         m=new Meeting(title.getText(),d,sec);
-        m.invite(invitees);
+        String subject="Meeting on : ||"+d+"||\n with Objective: ||"+title.getText().toString()+"||";
+        m.invite(invitees,subject);
         Main.Meetings.add(m);
         String query ="insert into meeting(mdate,objective) values('"+d+"','"+title.getText()+"')";
         PreparedStatement prep=con.prepareStatement(query);
         prep.execute();
+        for(Person p:invitees){
+            String query2="insert into(pid,msgFrom,msgTo,Subject) values("+p.getId()+",'"+p.getEmail()+"','"+sec.getEmail()+"','"+subject+"')";
+            PreparedStatement prep2=con.prepareStatement(query2);
+            prep2.execute();
+        }
         query="select * from meeting where mdate= '"+d+"' and objective ='"+title.getText().toString()+"'";
         Statement prep1=con.createStatement();
         ResultSet res=prep1.executeQuery(query);

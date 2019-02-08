@@ -5,6 +5,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 public abstract class Person implements Observer {
+    private ArrayList<Message> inbox;
     private String email;
     private String fullname;
     private String birthdate;//yyyy-mm-dd
@@ -29,6 +30,18 @@ public abstract class Person implements Observer {
         this.password=password;
         this.phone=phone;
         this.attendedMeetings=new ArrayList<Meeting>();
+        this.inbox=new ArrayList<Message>();
+    }
+
+    public ArrayList<Message> getInbox() {
+        return inbox;
+    }
+    public void addToInbox(Message m){
+        this.addToInbox(m);
+    }
+
+    public void setInbox(ArrayList<Message> inbox) {
+        this.inbox = inbox;
     }
 
     public String getEmail() {
@@ -90,6 +103,9 @@ public abstract class Person implements Observer {
     @Override
     public  void update(Observable o, Object arg) {
         attendedMeetings.add((Meeting)o);
+        Message m=(Message)arg;
+        m.setTo(this.email);
+        this.addToInbox(m);
     }
 
     public abstract void accept(PersonVisitor pv);
