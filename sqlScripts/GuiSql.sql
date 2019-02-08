@@ -109,6 +109,21 @@ CREATE TABLE IF NOT EXISTS `SMSdb`.`AttendMeetings` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+
+CREATE TABLE IF NOT EXISTS `SMSdb`.`Messages` (
+  `msgid` INT NOT NULL auto_increment,
+  `pid` INT NOT NULL,
+  `msgFrom` varchar(45) NOT NULL,
+  `msgTo` varchar(45) NOT NULL,
+  `Subject` varchar(300) NOT NULL,
+  PRIMARY KEY (`msgid`),
+  CONSTRAINT `fk_Message_for_Person`
+    FOREIGN KEY (`pid`)
+    REFERENCES `SMSdb`.`Person` (`pid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+)
+ENGINE = InnoDB;
 CREATE INDEX `fk_Person_has_Meeting_Meeting1_idx` ON `SMSdb`.`AttendMeetings` (`meid` ASC) ;
 
 CREATE INDEX `fk_Person_has_Meeting_Person1_idx` ON `SMSdb`.`AttendMeetings` (`pid` ASC);
@@ -122,6 +137,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 create user 'Dean'@'localhost' identified by 'Dean';
 grant all privileges on SMSdb.* to 'Dean'@'localhost';
+
+grant all privileges on SMSdb.messages to 'Dean'@'localhost';
+grant all privileges on SMSdb.messages to 'Member'@'localhost';
+grant all privileges on SMSdb.messages to 'Leader'@'localhost';
+
 
 create user 'Member'@'localhost' identified by 'Member';
 grant select ,show view on SMSdb.* to 'Member'@'localhost';

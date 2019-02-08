@@ -62,13 +62,11 @@ public class MeetingController implements Initializable {
         Connection con = DataBaseConnection.getConnection();
         Meeting m;
         ArrayList<Person> invitees =new ArrayList<Person>();
-
         ObservableList<String> selected=listview.getSelectionModel().getSelectedItems();
         Secretary sec=null;
         LocalDate value=date.getValue();
         DateTimeFormatter formatter=DateTimeFormatter.ofPattern("yyyy-mm-dd");
         String obj,d;
-
         if(title.getText().isEmpty() || date.getValue()== null || selected.isEmpty() ){
             etxt.setVisible(true);
             return;
@@ -126,14 +124,7 @@ public class MeetingController implements Initializable {
         }
 
         stxt.setVisible(true);
-
     }
-    @FXML
-    public void cancel(ActionEvent e) throws Exception {
-        Stage S = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        S.close();
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
