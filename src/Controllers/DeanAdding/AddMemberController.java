@@ -1,6 +1,8 @@
 package Controllers.DeanAdding;
 
+import Driver.Main;
 import Model.DataBaseConnection;
+import Model.Member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -57,5 +59,12 @@ public class AddMemberController {
         preparedStmt.execute();
         error.setVisible(false);
         added.setVisible(true);
+        Main.Members.add(new Member(email.getText(),name.getText(),date.getText(),"1234",phone.getText(),rank.getText(),null,null,Main.Members.get(Main.Members.size()-1).getId()+1));
+        name.clear();
+        email.clear();
+        date.clear();
+        rank.clear();
+        phone.clear();
+        id.clear();
     }
 }

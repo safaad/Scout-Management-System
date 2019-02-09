@@ -3,12 +3,10 @@ package Controllers.Views;
 import Driver.Main;
 import Model.Leaders;
 import Model.Person;
-import com.mysql.cj.xdevapi.Table;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -23,6 +21,7 @@ public class MemberViewDean implements Initializable {
     private static ObservableList<Member> data= FXCollections.observableArrayList();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        data.clear();
         TableColumn pid=new TableColumn("Id");
         TableColumn name=new TableColumn("Name");
         TableColumn email=new TableColumn("Email");

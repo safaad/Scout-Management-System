@@ -1,7 +1,9 @@
 package Controllers.DeanAdding;
 
+import Driver.Main;
 import Model.DataBaseConnection;
 import Model.Leaders;
+import Model.Secretary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -59,6 +61,14 @@ public class AddLeaderController {
         preparedStmt.execute();
         error.setVisible(false);
         success.setVisible(true);
+        if(type.equals("Leader"))
+            Main.Leaders.add(new Leaders(email.getText(),name.getText(),date.getText(),"1234",phone.getText(),null,DataBaseConnection.ID));
+        else
+            Main.Secretary.add(new Secretary(email.getText(),name.getText(),date.getText(),"1234",phone.getText(),null,DataBaseConnection.ID));
+        name.clear();
+        date.clear();
+        phone.clear();
+        email.clear();
     }
 
 }

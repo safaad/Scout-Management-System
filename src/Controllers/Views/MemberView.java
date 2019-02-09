@@ -2,6 +2,7 @@ package Controllers.Views;
 
 import Driver.Main;
 import Model.DataBaseConnection;
+import Model.DataBaseModel;
 import Model.Leaders;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -42,7 +43,7 @@ public class MemberView {
         AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/MemberView/rankView.fxml"));
         frame.getChildren().setAll(pane1);
         String mid = DataBaseConnection.ID;
-        Member m = Main.findMember(mid);
+        Member m = DataBaseModel.findMember(mid,Main.Members);
         String s = (m.getRank());
         ranks=(Label) pane1.getChildren().get(1);
         ranks.setText(s);
@@ -53,7 +54,7 @@ public class MemberView {
         AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/MemberView/leaderMember.fxml"));
         frame.getChildren().setAll(pane1);
         String mid = DataBaseConnection.ID;
-        Member m = Main.findMember(mid);
+        Member m = DataBaseModel.findMember(mid,Main.Members);
         Leaders l = m.getLeader();
         name = (Label) pane1.getChildren().get(2);
         email = (Label) pane1.getChildren().get(1);
@@ -66,7 +67,7 @@ public class MemberView {
         AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/MemberView/evalView.fxml"));
         frame.getChildren().setAll(pane1);
         String mid = DataBaseConnection.ID;
-        Member m = Main.findMember(mid);
+        Member m = DataBaseModel.findMember(mid,Main.Members);
         String evaluation = String.valueOf(m.getEvaluation());
         if (evaluation.equals("0") || evaluation.equals("1") || evaluation.equals("2")) {
             bronze=(ImageView)pane1.getChildren().get(2);

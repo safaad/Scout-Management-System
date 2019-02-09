@@ -2,6 +2,7 @@ package Controllers.LeaderAdding;
 
 import Driver.Main;
 import Model.DataBaseConnection;
+import Model.DataBaseModel;
 import Model.Leaders;
 import Model.Member;
 import javafx.collections.FXCollections;
@@ -42,7 +43,7 @@ public class leaderEvaluation implements Initializable {
         for(Member m : rowsData){
             String mid=m.getId();
             int evaluation= (int) m.getRating().getRating();
-            Main.findMember(mid).setEvaluation(evaluation);
+            DataBaseModel.findMember(mid , Main.Members).setEvaluation(evaluation);
             String query="UPDATE members set evaluation = "+evaluation+" WHERE mid = '"+mid+"'";
             statement=con.prepareStatement(query);
             statement.execute();
@@ -53,7 +54,7 @@ public class leaderEvaluation implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         tableEv.getItems().clear();
         tableEv.getColumns().clear();
-        Leaders leader= Main.findLeader(lid);
+        Leaders leader= DataBaseModel.findLeader(lid ,Main.Leaders);
         midCol.setCellValueFactory(new PropertyValueFactory<Member,String>("id"));
         memCol.setCellValueFactory(new PropertyValueFactory<Member,String>("fullname"));
         evalCol.setCellValueFactory(new PropertyValueFactory<Member, Rating>("rating"));

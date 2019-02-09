@@ -1,10 +1,7 @@
 package Controllers.Views;
 
 import Driver.Main;
-import Model.DataBaseConnection;
-import Model.Leaders;
-import Model.Member;
-import Model.Person;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -23,7 +20,7 @@ public class MemberViewLeader implements Initializable {
     private static ObservableList<Member> data= FXCollections.observableArrayList();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Leaders l =Main.findLeader(DataBaseConnection.ID);
+        Leaders l = DataBaseModel.findLeader(DataBaseConnection.ID , Main.Leaders);
         TableColumn pid=new TableColumn("Id");
         TableColumn name=new TableColumn("Name");
         TableColumn email=new TableColumn("Email");

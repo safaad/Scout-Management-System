@@ -2,13 +2,13 @@ package Controllers.Views;
 
 import Driver.Main;
 import Model.DataBaseConnection;
+import Model.DataBaseModel;
 import Model.Meeting;
 import Model.Person;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -22,7 +22,7 @@ public class MeetingView implements Initializable {
     private static ObservableList<Meeting> data= FXCollections.observableArrayList();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Person p = Main.findPerson(DataBaseConnection.ID);
+        Person p = DataBaseModel.findPerson(DataBaseConnection.ID,Main.Secretary,Main.Leaders);
         TableColumn meid,obj,date;
         meid=new TableColumn("Meeting Id");
         meid.setCellValueFactory(new PropertyValueFactory<Meeting,String>("meid"));
