@@ -33,6 +33,15 @@ public class Message {
         return subject;
     }
 
+    @Override
+    public String toString() {
+        return "Message{" +
+                "from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                ", subject='" + subject + '\'' +
+                '}';
+    }
+
     public void setSubject(String subject) {
         this.subject = subject;
     }

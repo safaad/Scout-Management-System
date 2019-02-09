@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class DeanController {
 
     @FXML
@@ -46,9 +48,10 @@ public class DeanController {
         S.show();
     }
 
-    public void messageClick(ActionEvent event) {
+    public void messageClick(ActionEvent event) throws IOException {
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/Messages.fxml"));
+        pane.getChildren().setAll(pane1);
     }
-
-    public void changePass(ActionEvent event) {
+        public void changePass(ActionEvent event) {
     }
 }

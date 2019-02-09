@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class LeaderController {
 
     @FXML
@@ -46,7 +48,9 @@ public class LeaderController {
         S.show();
     }
 
-    public void messageClick(ActionEvent event) {
+    public void messageClick(ActionEvent event) throws IOException {
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/Messages.fxml"));
+        LeaderPane.getChildren().setAll(pane1);
     }
 
     public void changePass(ActionEvent event) {

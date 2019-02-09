@@ -10,6 +10,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.layout.Pane;
 
+import java.io.IOException;
+
 public class SecretaryController {
     @FXML
     Pane secPane;
@@ -36,9 +38,12 @@ public class SecretaryController {
     public void viewMeeting(ActionEvent event){
 
     }
-    public void messageClick(ActionEvent event) {
-    }
+    @FXML
+    public void messageClick(ActionEvent event) throws IOException {
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/Messages.fxml"));
+        secPane.getChildren().setAll(pane1);
 
-    public void changePass(ActionEvent event) {
+    }
+        public void changePass(ActionEvent event) {
     }
 }
