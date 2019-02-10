@@ -1,6 +1,2 @@
-error in loading members from database
-error in loading meetings
-bugs in views
-email observer
+
 change password
-fillevaluation
