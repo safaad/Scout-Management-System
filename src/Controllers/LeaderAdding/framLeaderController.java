@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class framLeaderController {
 
        @FXML
-    AnchorPane pane;
+    AnchorPane pane,mainPane;
 
     @FXML
     public void members (ActionEvent event) throws Exception {
@@ -24,13 +24,6 @@ public class framLeaderController {
         AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/DeanAdding/AddItem.fxml"));
         pane.getChildren().setAll(pane1);
     }
-    @FXML
-    public void addEvaluation(ActionEvent e)throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../../GUI/LeaderAdding/LeaderEvaluation.fxml"));
-        Stage s =new Stage();
-        s.setScene(new Scene(root));
-        s.setResizable(false);
-        s.show();
-    }
+
 
 }

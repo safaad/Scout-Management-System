@@ -48,6 +48,13 @@ public class LeaderController {
         S.show();
     }
 
+    @FXML
+    public void evaluate(ActionEvent e)throws Exception{
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/LeaderAdding/LeaderEvaluation.fxml"));
+        LeaderPane.getChildren().setAll(pane1);
+    }
+
+    @FXML
     public void messageClick(ActionEvent event) throws IOException {
         AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/Messages.fxml"));
         LeaderPane.getChildren().setAll(pane1);

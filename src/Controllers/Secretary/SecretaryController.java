@@ -35,12 +35,13 @@ public class SecretaryController {
     }
 
     @FXML
-    public void viewMeeting(ActionEvent event){
-
+    public void viewMeeting(ActionEvent event) throws Exception{
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/DeanView/MeetingView.fxml"));
+        secPane.getChildren().setAll(pane1);
     }
     @FXML
     public void messageClick(ActionEvent event) throws IOException {
-        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/Messages.fxml"));
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../../GUI/Messages.fxml"));
         secPane.getChildren().setAll(pane1);
 
     }

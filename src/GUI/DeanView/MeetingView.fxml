@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controllers.Views.MeetingView"
-            prefHeight="400" prefWidth="468">
+<AnchorPane prefHeight="400" prefWidth="468" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Views.MeetingView">
     <children>
-        <TableView fx:id="tableMeeting" layoutX="-1.0" prefHeight="400" prefWidth="468" />
+        <TableView fx:id="tableMeeting" prefHeight="400" prefWidth="267.0">
+         <columns>
+            <TableColumn fx:id="date" minWidth="0.0" prefWidth="115.0" text="Meeting Date" />
+            <TableColumn fx:id="obj" prefWidth="151.0" text="Meeting Objective" />
+         </columns></TableView>
+      <ImageView fitHeight="196.0" fitWidth="209.0" layoutX="259.0" layoutY="124.0">
+         <image>
+            <Image url="@../../Pic/meeting.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

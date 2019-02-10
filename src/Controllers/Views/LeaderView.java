@@ -22,6 +22,7 @@ public class LeaderView implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        data.clear();
         tableLeader.getItems().clear();
         tableLeader.getColumns().clear();
         TableColumn pid=new TableColumn("Id");

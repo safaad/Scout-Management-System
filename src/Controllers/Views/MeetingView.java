@@ -19,20 +19,17 @@ import java.util.ResourceBundle;
 public class MeetingView implements Initializable {
     @FXML
     TableView<Meeting> tableMeeting;
+    @FXML
+    TableColumn obj,date;
     private static ObservableList<Meeting> data= FXCollections.observableArrayList();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        data.clear();
         Person p = DataBaseModel.findPerson(DataBaseConnection.ID,Main.Secretary,Main.Leaders);
-        TableColumn meid,obj,date;
-        meid=new TableColumn("Meeting Id");
-        meid.setCellValueFactory(new PropertyValueFactory<Meeting,String>("meid"));
-        obj=new TableColumn("Objective");
         obj.setCellValueFactory(new PropertyValueFactory<Meeting,String>("objective"));
-        date=new TableColumn("Meeting Date");
         date.setCellValueFactory(new PropertyValueFactory<Person,String>("Date"));
         for(Meeting m : p.getAttendedMeetings())
             data.add(m);
         tableMeeting.setItems(data);
-        tableMeeting.getColumns().addAll(meid,obj,date);
     }
 }

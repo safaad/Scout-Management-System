@@ -76,7 +76,7 @@
             <Image url="@../Pic/name.png" />
          </image>
       </ImageView>
-      <Button layoutX="635.0" layoutY="5.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="23.0" style="-fx-background-color: transperet;">
+      <Button layoutX="635.0" layoutY="5.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="23.0" style="-fx-background-color: transparent;">
        <tooltip>
            <Tooltip style="-fx-background-color: #3f157e;" text="Logout" />
        </tooltip>
@@ -86,7 +86,7 @@
                <Image url="@../Pic/changePassword.png" />
            </image>
        </ImageView>
-       <Button fx:id="changePassB" layoutX="599.0" layoutY="7.0" mnemonicParsing="false" onAction="#changePass" prefHeight="27.0" prefWidth="30.0" style="-fx-background-color: transperent;">
+       <Button fx:id="changePassB" layoutX="599.0" layoutY="7.0" mnemonicParsing="false" onAction="#changePass" prefHeight="27.0" prefWidth="30.0" style="-fx-background-color: transparent;">
            <tooltip>
                <Tooltip style="-fx-background-color: #3f157e;" text="Change Password" />
            </tooltip>

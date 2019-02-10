@@ -21,27 +21,27 @@
             <Image url="@../Pic/name.png" />
          </image>
       </ImageView>
-      <Button layoutX="14.0" layoutY="95.0" mnemonicParsing="false" onAction="#add" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="Add" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#add" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="Add" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="158.0" mnemonicParsing="false" onAction="#remove" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="Remove" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#remove" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="Remove" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#update" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="Update" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onAction="#update" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="Update" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="287.0" mnemonicParsing="false" onAction="#view" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="View" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="315.0" mnemonicParsing="false" onAction="#view" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="View" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <AnchorPane id="LeaderPane" fx:id="LeaderPane" layoutX="189.0" layoutY="61.0" prefHeight="396.0" prefWidth="462.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="16.0">
+      <AnchorPane id="LeaderPane" fx:id="LeaderPane" layoutX="207.0" layoutY="61.0" prefHeight="396.0" prefWidth="462.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="-2.0">
          <children>
             <Text fill="#3f157e" layoutX="93.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I'M A" wrappingWidth="66.00000858306885">
                <font>
@@ -88,7 +88,7 @@
             <Image url="@../Pic/scout-sign.png" />
          </image>
       </ImageView>
-      <Button layoutX="640.0" layoutY="7.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: transperant;">
+      <Button layoutX="640.0" layoutY="7.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: transparent;">
          <tooltip>
             <Tooltip style="-fx-background-color: #3f157e;" text="Logout" />
          </tooltip></Button>
@@ -97,7 +97,7 @@
             <Image url="@../Pic/mail_icon.png" />
          </image>
       </ImageView>
-      <Button fx:id="messageButton" layoutX="599.0" layoutY="8.0" mnemonicParsing="false" onAction="#messageClick" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: transperent;">
+      <Button fx:id="messageButton" layoutX="599.0" layoutY="8.0" mnemonicParsing="false" onAction="#messageClick" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: transparent;">
          <tooltip>
             <Tooltip style="-fx-background-color: #3f157e;" text="Messages" />
          </tooltip>
@@ -107,10 +107,15 @@
             <Image url="@../Pic/changePassword.png" />
          </image>
       </ImageView>
-      <Button fx:id="changePassB" layoutX="561.0" layoutY="8.0" mnemonicParsing="false" onAction="#changePass" prefHeight="18.0" prefWidth="32.0" style="-fx-background-color: transperent;">
+      <Button fx:id="changePassB" layoutX="561.0" layoutY="8.0" mnemonicParsing="false" onAction="#changePass" prefHeight="18.0" prefWidth="32.0" style="-fx-background-color: transparent;">
          <tooltip>
             <Tooltip style="-fx-background-color: #3f157e;" text="Change Password" />
          </tooltip>
+      </Button>
+      <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#evaluate" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #3f157e;" text="Evaluate" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
       </Button>
    </children>
 </AnchorPane>

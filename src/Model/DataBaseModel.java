@@ -1,8 +1,11 @@
 package Model;
 
+import Driver.Main;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class DataBaseModel {
@@ -91,29 +94,65 @@ public class DataBaseModel {
             preparedStmt = con.prepareStatement(query);
             ResultSet rs = preparedStmt.executeQuery();
             Meeting.add(new Meeting(meid,obj,date,S));
-            ArrayList<Person> P=new ArrayList<>();
+            ArrayList<Person> P=new ArrayList<Person>();
             while(rs.next()){
                 String pid = rs.getString("pid");
                 String sid = rs.getString("sid");
+
                 for(int i=0;i<Secretary.size();i++){
-                    if(Secretary.get(i).getId().equals(sid)){
-                        S=Secretary.get(i);
-                        S.addAttendedMeetings(Meeting.get(Meeting.size()-1));
-                        return;
+                    if(Secretary.get(i).getId().equals(sid) || Secretary.get(i).getId().equals(pid)){
+                        if(Secretary.get(i).getId().equals(pid)){
+                            P.add(Secretary.get(i));
+                            Secretary.get(i).addAttendedMeetings(Meeting.get(Meeting.size()-1));
+                        }
+                        //S=Secretary.get(i);
+                        //S.addAttendedMeetings(Meeting.get(Meeting.size()-1));
+                        break;
                     }
                 }
                 for(int j=0;j<Leaders.size();j++) {
+                    if(Dean.getDean().getId().equals(pid)) {
+                        Dean.getDean().addAttendedMeetings(Meeting.get(Meeting.size() - 1));
+                        P.add(Dean.getDean());
+                    }
                     if (Leaders.get(j).getId().equals(pid)) {
                         P.add(Leaders.get(j));
                         Leaders.get(j).addAttendedMeetings(Meeting.get(Meeting.size()-1));
-                        return;
+                        break;
                     }
                 }
             }
             Meeting.get(Meeting.size()-1).setInvities(P);
 
         }
+        fillMessages();
+    }
 
+    public static void fillMessages(){
+        Connection con = DataBaseConnection.getConnection();
+        String qury ="select * from messages";
+        PreparedStatement preparedStmt = null;
+        try {
+            preparedStmt = con.prepareStatement(qury);
+            ResultSet resultSet = preparedStmt.executeQuery();
+            Person p;
+             while(resultSet.next()){
+                 String msgid,pid,msgFrom,msgTo,Subject;
+                 msgid=resultSet.getString("msgid");
+                 pid=resultSet.getString("pid");
+                 msgFrom=resultSet.getString("msgFrom");
+                 msgTo=resultSet.getString("msgTo");
+                 Subject=resultSet.getString("Subject");
+                 Message m=new Message(msgFrom,msgTo,Subject);
+                 p= findPerson(pid,Main.Secretary,Main.Leaders);
+                 if(p!=null)
+                     p.addToInbox(m);
+                 else
+                     Dean.getDean().addToInbox(m);
+             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     public static Person findPerson(String pid ,ArrayList<Secretary> Secretary , ArrayList<Leaders> Leaders){
         if(pid.equals(Dean.getDean().getId()))

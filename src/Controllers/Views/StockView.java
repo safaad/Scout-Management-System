@@ -25,11 +25,11 @@ public class StockView implements Initializable {
     TableView<Stock> tableStock;
     private static ObservableList<Stock> data= FXCollections.observableArrayList();
     Connection con = DataBaseConnection.getConnection();
+    @FXML
+    TableColumn itid,iname,qty;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        TableColumn itid=new TableColumn("Item ID");
-        TableColumn iname=new TableColumn("Item Name");
-        TableColumn qty=new TableColumn("Quantity");
+        data.clear();
         itid.setCellValueFactory(new PropertyValueFactory<Stock,String>("itid"));
         iname.setCellValueFactory(new PropertyValueFactory<Stock,String>("iname"));
         qty.setCellValueFactory(new PropertyValueFactory<Stock,String>("quantity"));
@@ -47,6 +47,5 @@ public class StockView implements Initializable {
             e.printStackTrace();
         }
         tableStock.setItems(data);
-        tableStock.getColumns().addAll(itid,iname,qty);
     }
 }
