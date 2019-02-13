@@ -37,8 +37,8 @@ public class Message {
     public String toString() {
         return "Message{" +
                 "from='" + from + '\'' +
-                ", to='" + to + '\'' +
-                ", subject='" + subject + '\'' +
+                ",\n to='" + to + '\'' +
+                ",\n subject='" + subject + '\'' +
                 '}';
     }
 

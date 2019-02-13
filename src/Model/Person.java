@@ -37,7 +37,7 @@ public abstract class Person implements Observer {
         return inbox;
     }
     public void addToInbox(Message m){
-        this.addToInbox(m);
+        this.inbox.add(m);
     }
 
     public void setInbox(ArrayList<Message> inbox) {

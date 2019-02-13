@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanController">
+<AnchorPane prefHeight="461.0" prefWidth="667.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeanController">
    <children>
       <ImageView fitHeight="44.0" fitWidth="32.0" layoutX="621.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <image>
@@ -103,7 +103,7 @@
             <Image url="@../Pic/changePassword.png" />
          </image>
       </ImageView>
-      <Button layoutX="545.0" layoutY="16.0" mnemonicParsing="false" onAction="#changePass" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: transperent;">
+      <Button fx:id="changePassB" layoutX="545.0" layoutY="4.0" mnemonicParsing="false" onAction="#changePass" prefHeight="39.0" prefWidth="32.0" style="-fx-background-color: transperent;">
          <tooltip>
             <Tooltip style="-fx-background-color: #3f157e;" text="Change Password" />
          </tooltip>

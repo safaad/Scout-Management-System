@@ -20,6 +20,7 @@ public class MemberViewLeader implements Initializable {
     private static ObservableList<Member> data= FXCollections.observableArrayList();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        data.clear();
         Leaders l = DataBaseModel.findLeader(DataBaseConnection.ID , Main.Leaders);
         TableColumn pid=new TableColumn("Id");
         TableColumn name=new TableColumn("Name");

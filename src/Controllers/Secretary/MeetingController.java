@@ -107,7 +107,7 @@ public class MeetingController implements Initializable {
         PreparedStatement prep=con.prepareStatement(query);
         prep.execute();
         for(Person p:invitees){
-            String query2="insert into(pid,msgFrom,msgTo,Subject) values("+p.getId()+",'"+p.getEmail()+"','"+sec.getEmail()+"','"+subject+"')";
+            String query2="insert into messages(pid,msgFrom,msgTo,Subject) values("+p.getId()+",'"+p.getEmail()+"','"+sec.getEmail()+"','"+subject+"')";
             PreparedStatement prep2=con.prepareStatement(query2);
             prep2.execute();
         }
