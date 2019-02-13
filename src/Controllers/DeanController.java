@@ -48,10 +48,18 @@ public class DeanController {
         S.show();
     }
 
+    @FXML
     public void messageClick(ActionEvent event) throws IOException {
         AnchorPane pane1 = FXMLLoader.load(getClass().getResource("../GUI/Messages.fxml"));
         pane.getChildren().setAll(pane1);
     }
-        public void changePass(ActionEvent event) {
+
+    @FXML
+    public void changePass(ActionEvent event) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/changepass.fxml"));
+        Stage S = new Stage();
+        S.setScene(new Scene(root));
+        S.show();
+
     }
 }
