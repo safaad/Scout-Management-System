@@ -62,9 +62,9 @@ public class AddLeaderController {
         error.setVisible(false);
         success.setVisible(true);
         if(type.equals("Leader"))
-            Main.Leaders.add(new Leaders(email.getText(),name.getText(),date.getText(),"1234",phone.getText(),null,DataBaseConnection.ID));
+            Main.Leaders.add(new Leaders(email.getText(),name.getText(),date.getText(),"1234",phone.getText(),Main.Leaders.get(Main.Leaders.size()-1).getId()+1,DataBaseConnection.ID));
         else
-            Main.Secretary.add(new Secretary(email.getText(),name.getText(),date.getText(),"1234",phone.getText(),null,DataBaseConnection.ID));
+            Main.Secretary.add(new Secretary(email.getText(),name.getText(),date.getText(),"1234",phone.getText(),Main.Secretary.get(Main.Secretary.size()-1).getId(),DataBaseConnection.ID));
         name.clear();
         date.clear();
         phone.clear();
